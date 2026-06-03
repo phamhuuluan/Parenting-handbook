@@ -26,6 +26,9 @@
       --max: 52rem;
       --glow: rgba(201, 169, 98, 0.35);
       --header-h: 3.5rem;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --section-accent: linear-gradient(180deg, var(--accent) 0%, var(--lotus) 100%);
       --font-en: "Source Serif 4", Georgia, serif;
       --font-en-display: "Cormorant Garamond", Georgia, serif;
       --font-vi: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
@@ -50,7 +53,9 @@
       color: var(--text);
       background: var(--bg);
       background-image:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(196, 165, 116, 0.15), transparent),
+        radial-gradient(ellipse 90% 60% at 50% -15%, rgba(196, 165, 116, 0.18), transparent 50%),
+        radial-gradient(circle at 100% 80%, rgba(154, 114, 36, 0.06), transparent 40%),
+        radial-gradient(circle at 0% 60%, rgba(154, 114, 36, 0.05), transparent 35%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg-pattern) 100%);
       background-attachment: fixed;
       text-rendering: optimizeLegibility;
@@ -90,23 +95,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      padding: 0.65rem 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      padding: 0.6rem 1rem;
       min-height: var(--header-h);
-      background: rgba(255, 252, 247, 0.88);
-      backdrop-filter: blur(12px) saturate(1.2);
+      background: rgba(255, 252, 247, 0.92);
+      backdrop-filter: blur(14px) saturate(1.25);
       border-bottom: 1px solid var(--border);
-      box-shadow: var(--header-shadow);
+      box-shadow: 0 1px 0 var(--border), 0 8px 24px rgba(42, 38, 34, 0.06);
     }
 
     .site-title {
-      font-size: 0.8125rem;
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--accent-deep);
       letter-spacing: 0.03em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.35;
+      min-width: 0;
+      flex: 1 1 auto;
     }
 
     body.lang-vi .site-title { font-family: var(--font-vi); }
@@ -170,142 +176,222 @@
 
     .cover {
       text-align: center;
-      padding: 2rem 1.5rem 2.5rem;
+      padding: 2.25rem 1.25rem 2.75rem;
       margin: 0 -1.25rem 2.5rem;
       background:
-        radial-gradient(ellipse 120% 80% at 50% 0%, rgba(201, 169, 98, 0.12), transparent 55%),
+        radial-gradient(ellipse 120% 80% at 50% 0%, rgba(201, 169, 98, 0.16), transparent 55%),
         linear-gradient(165deg, #fffdf9 0%, var(--surface) 45%, #f3ebe0 100%);
       border-bottom: 1px solid var(--border);
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
       box-shadow: var(--card-shadow);
       position: relative;
       overflow: hidden;
     }
 
-    .cover-eyebrow {
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin: 0 0 1rem;
-    }
-
-    body.lang-vi .cover-eyebrow,
-    body.lang-ja .cover-eyebrow,
-    body.lang-ko .cover-eyebrow,
-    body.lang-zh .cover-eyebrow {
-      font-family: inherit;
-      text-transform: none;
-      letter-spacing: 0.04em;
-    }
-
-    body.lang-vi .cover-eyebrow { font-family: var(--font-vi); }
-    body.lang-ja .cover-eyebrow { font-family: var(--font-ja); }
-    body.lang-ko .cover-eyebrow { font-family: var(--font-ko); }
-    body.lang-zh .cover-eyebrow { font-family: var(--font-zh); }
-
-    .cover::before,
-    .cover::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(14rem, 50%);
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--lotus), transparent);
-    }
-
-    .cover::before { top: 1rem; }
-    .cover::after { bottom: 1rem; }
-
-    .cover h1 {
-      font-family: var(--font-en-display);
-      font-size: clamp(2rem, 6vw, 2.75rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin: 0 0 0.75rem;
+    .icon {
+      display: block;
+      flex-shrink: 0;
       color: var(--accent-deep);
-      letter-spacing: 0.02em;
     }
 
-    body.lang-vi .cover h1 {
-      font-family: var(--font-vi-display);
-      font-weight: 700;
-      letter-spacing: 0;
+    .cover-art {
+      width: min(4.5rem, 22vw);
+      height: auto;
+      margin: 0 auto 1.25rem;
+      display: block;
+      filter: drop-shadow(0 4px 14px rgba(74, 143, 173, 0.28));
     }
 
-    body.lang-ja .cover h1,
-    body.lang-ko .cover h1,
-    body.lang-zh .cover h1 {
-      font-family: inherit;
-      font-weight: 700;
-      letter-spacing: 0;
+    .pillar .icon-pillar {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0 auto 0.65rem;
     }
 
-    .cover .subtitle {
-      font-family: var(--font-en-display);
-      font-size: clamp(1.2rem, 3.8vw, 1.55rem);
-      font-weight: 500;
-      font-style: italic;
-      color: var(--muted);
-      margin: 0 0 1.25rem;
-      line-height: 1.4;
+    .label {
+      gap: 0.5rem;
     }
 
-    body.lang-vi .cover .subtitle {
-      font-family: var(--font-vi-display);
-      font-style: normal;
-      font-weight: 600;
+    .label .icon-label {
+      width: 1.125rem;
+      height: 1.125rem;
+      flex-shrink: 0;
+      opacity: 0.85;
     }
 
-    body.lang-ja .cover .subtitle,
-    body.lang-ko .cover .subtitle,
-    body.lang-zh .cover .subtitle {
-      font-family: inherit;
-      font-style: normal;
-      font-weight: 600;
+    .toc-head-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
 
-    .cover .meta {
-      font-size: 0.9375rem;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 28rem;
+    .toc-head-inner h2 {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .icon-brand {
+      width: 1.35rem;
+      height: 1.35rem;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+
+    .cover-block {
+      max-width: 26rem;
       margin: 0 auto;
     }
 
-    .cover .meta strong {
-      display: block;
-      color: var(--accent-deep);
+    .cover-book {
+      margin: 0 0 1.1rem;
+      font-size: 0.8125rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      line-height: 1.35;
     }
 
-    body.lang-vi .cover .meta,
-    body.lang-vi .cover .meta strong {
-      font-family: var(--font-vi);
+    body.lang-vi .cover-book {
+      font-family: var(--font-vi-display);
+      letter-spacing: 0.12em;
     }
+
+    body.lang-ja .cover-book { font-family: var(--font-ja); letter-spacing: 0.08em; text-transform: none; }
+    body.lang-ko .cover-book { font-family: var(--font-ko); letter-spacing: 0.06em; text-transform: none; }
+    body.lang-zh .cover-book { font-family: var(--font-zh); letter-spacing: 0.08em; text-transform: none; }
+
+    .cover-block .cover-art {
+      margin-bottom: 1.35rem;
+    }
+
+    .cover-title {
+      font-family: var(--font-en-display);
+      font-size: clamp(1.65rem, 5.5vw, 2.35rem);
+      font-weight: 700;
+      line-height: 1.22;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    body.lang-vi .cover-title {
+      font-family: var(--font-vi-display);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    body.lang-ja .cover-title,
+    body.lang-ko .cover-title,
+    body.lang-zh .cover-title {
+      font-family: inherit;
+      font-weight: 700;
+    }
+
+    .cover-divider {
+      width: min(12rem, 55%);
+      height: 1px;
+      margin: 1.35rem auto;
+      border: none;
+      background: linear-gradient(90deg, transparent, var(--lotus), transparent);
+    }
+
+    .cover-principles {
+      margin: 0 0 0.85rem;
+      font-family: var(--font-en-display);
+      font-size: clamp(1rem, 3.2vw, 1.125rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    body.lang-vi .cover-principles {
+      font-family: var(--font-vi-display);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    body.lang-ja .cover-principles,
+    body.lang-ko .cover-principles,
+    body.lang-zh .cover-principles {
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .cover-homage {
+      margin: 0 0 1.35rem;
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    body.lang-vi .cover-homage { font-family: var(--font-vi); }
+    body.lang-ja .cover-homage { font-family: var(--font-ja); }
+    body.lang-ko .cover-homage { font-family: var(--font-ko); }
+    body.lang-zh .cover-homage { font-family: var(--font-zh); }
+
+    .cover-source {
+      margin: 0;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      line-height: 1.45;
+    }
+
+    body.lang-vi .cover-source { font-family: var(--font-vi); }
+    body.lang-ja .cover-source { font-family: var(--font-ja); }
+    body.lang-ko .cover-source { font-family: var(--font-ko); }
+    body.lang-zh .cover-source { font-family: var(--font-zh); }
 
     #intro {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.35rem;
       box-shadow: var(--card-shadow);
       margin-bottom: 2rem;
+      position: relative;
+    }
+
+    #intro::before,
+    section[id^="p"]::before,
+    .toc::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.25rem;
+      bottom: 1.25rem;
+      width: 4px;
+      border-radius: 0 3px 3px 0;
+      background: var(--section-accent);
+      opacity: 0.9;
     }
 
     section[id^="p"] {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem 1.5rem 1.5rem;
+      border-radius: var(--radius-lg);
+      padding: 1.65rem 1.25rem 1.5rem 1.5rem;
       margin-bottom: 1.75rem;
       box-shadow: var(--card-shadow);
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.55s ease, transform 0.55s ease;
+      position: relative;
     }
 
     section[id^="p"].is-visible {
@@ -345,8 +431,9 @@
       text-align: center;
       padding: 1.25rem 1rem;
       background: linear-gradient(180deg, #fff 0%, var(--accent-soft) 100%);
-      border-radius: 14px;
+      border-radius: var(--radius-md);
       border: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(42, 38, 34, 0.04);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
@@ -391,26 +478,28 @@
     .toc-list li:last-child { border-bottom: none; }
 
     .toc-list a {
-      display: flex;
-      justify-content: flex-start;
+      display: grid;
+      grid-template-columns: 2.5rem minmax(0, 1fr);
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.65rem 0.75rem;
-      padding: 1rem 0.75rem;
+      column-gap: 0.85rem;
+      row-gap: 0.25rem;
+      padding: 1rem 0.65rem;
       color: var(--text);
       text-decoration: none;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.45;
       text-align: left;
       transition: background 0.2s ease, color 0.2s ease;
+      border-radius: 10px;
     }
 
     .toc-list a::before {
       content: counter(toc);
-      flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
-      display: inline-flex;
+      grid-column: 1;
+      grid-row: 1;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.875rem;
@@ -423,8 +512,11 @@
     }
 
     .toc-list .toc-label {
-      flex: 0 1 auto;
-      max-width: 28rem;
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
+      max-width: none;
+      align-self: center;
     }
 
     body.lang-vi .toc-list a {
@@ -485,39 +577,74 @@
 
     h2 {
       font-family: var(--font-en-display);
-      font-size: 1.75rem;
+      font-size: clamp(1.35rem, 4.5vw, 1.75rem);
       font-weight: 700;
       margin: 0 0 1.1rem;
       color: var(--accent-deep);
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.65rem;
       border-bottom: 2px solid var(--accent-soft);
+      line-height: 1.25;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     body.lang-vi h2 {
       font-family: var(--font-vi-display);
-      font-size: 1.5rem;
+      font-size: clamp(1.25rem, 4.2vw, 1.5rem);
+      letter-spacing: 0.01em;
+    }
+
+    body.lang-ja h2 {
+      font-family: var(--font-ja);
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      font-weight: 700;
+    }
+
+    body.lang-ko h2 {
+      font-family: var(--font-ko);
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      font-weight: 700;
+    }
+
+    body.lang-zh h2 {
+      font-family: var(--font-zh);
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      font-weight: 700;
     }
 
     h3.principle-title {
       font-family: var(--font-en-display);
-      font-size: 1.45rem;
+      font-size: clamp(1.15rem, 4.2vw, 1.45rem);
       margin: 0;
-      line-height: 1.3;
+      line-height: 1.35;
       color: var(--text);
+      font-weight: 600;
+      min-width: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     body.lang-vi h3.principle-title {
       font-family: var(--font-vi-display);
-      font-size: 1.3rem;
       font-weight: 700;
+      hyphens: manual;
+    }
+
+    body.lang-ja h3.principle-title,
+    body.lang-ko h3.principle-title,
+    body.lang-zh h3.principle-title {
+      font-family: inherit;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
     .principle-header {
-      display: flex;
-      justify-content: flex-start;
+      display: grid;
+      grid-template-columns: 3rem minmax(0, 1fr);
+      column-gap: 0.875rem;
+      row-gap: 0;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.75rem 1rem;
       margin: 0 0 1.5rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--accent-soft);
@@ -525,24 +652,29 @@
     }
 
     .principle-header .principle-title {
-      flex: 0 1 auto;
-      max-width: 100%;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      min-width: 0;
     }
 
     .principle-num {
-      flex-shrink: 0;
-      width: 2.75rem;
-      height: 2.75rem;
+      grid-column: 1;
+      grid-row: 1;
+      width: 3rem;
+      height: 3rem;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(145deg, var(--accent) 0%, var(--accent-deep) 100%);
       color: #fff;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       border-radius: 50%;
-      box-shadow: 0 3px 12px rgba(107, 79, 24, 0.3);
+      box-shadow: 0 3px 12px rgba(107, 79, 24, 0.28);
       font-family: var(--font-vi);
+      align-self: start;
+      margin-top: 0.1rem;
     }
 
     .label {
@@ -577,17 +709,19 @@
     .toc {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem 1.25rem 1.25rem;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.1rem 1.1rem 1.35rem;
       box-shadow: var(--card-shadow);
       margin-bottom: 2rem;
       text-align: left;
+      position: relative;
     }
 
     .toc-head {
       margin-bottom: 1.5rem;
       padding-bottom: 1.25rem;
       border-bottom: 1px solid var(--accent-soft);
+      text-align: center;
     }
 
     .toc-head h2 {
@@ -597,6 +731,11 @@
       font-size: 1.5rem;
       color: var(--accent-deep);
       letter-spacing: 0.02em;
+    }
+
+    .toc-head .toc-sub {
+      margin: 0;
+      text-align: center;
     }
 
     body.lang-vi .toc-head h2 {
@@ -677,10 +816,12 @@
     .dialogue .line {
       margin: 0;
       padding: 1rem 1.1rem;
-      background: rgba(232, 220, 196, 0.35);
-      border-radius: 10px;
-      border-left: 3px solid var(--lotus);
+      background: rgba(255, 252, 247, 0.9);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--lotus);
       line-height: 1.65;
+      box-shadow: 0 2px 10px rgba(42, 38, 34, 0.04);
     }
 
     body.lang-vi .dialogue .line {
@@ -694,11 +835,11 @@
 
     .closing {
       text-align: center;
-      padding: 2.75rem 1.5rem 3rem;
+      padding: 2.75rem 1.35rem 3rem;
       margin-top: 0.5rem;
       background: linear-gradient(180deg, var(--surface) 0%, #f5efe6 100%);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius-lg);
       box-shadow: var(--card-shadow);
     }
 
@@ -760,8 +901,8 @@
 
     .back-top {
       position: fixed;
-      bottom: 1.25rem;
-      right: 1.25rem;
+      bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+      right: max(1.25rem, env(safe-area-inset-right, 0px));
       width: 2.75rem;
       height: 2.75rem;
       border: 1px solid var(--border);
@@ -797,12 +938,105 @@
     body.lang-zh .zh-only { display: block !important; }
     body.lang-zh span.zh-only { display: inline !important; }
 
+    @media (max-width: 640px) {
+      :root { --header-h: 6.5rem; }
+
+      html { scroll-padding-top: calc(var(--header-h) + 0.75rem); }
+
+      .site-header {
+        align-items: stretch;
+        padding: 0.55rem 0.85rem 0.65rem;
+      }
+
+      .site-brand {
+        flex: 1 1 100%;
+        justify-content: center;
+      }
+
+      .site-title {
+        text-align: center;
+        font-size: 0.9375rem;
+        padding: 0.15rem 0;
+      }
+
+      .lang-switch {
+        flex: 1 1 100%;
+        max-width: none;
+        justify-content: center;
+        padding: 5px;
+      }
+
+      .lang-switch button {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.5rem;
+      }
+
+      .cover-title {
+        font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+        padding: 0 0.25rem;
+      }
+
+      .cover-principles {
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+        padding: 0 0.35rem;
+      }
+
+      .principle-header {
+        grid-template-columns: 2.65rem minmax(0, 1fr);
+        column-gap: 0.75rem;
+      }
+
+      .principle-num {
+        width: 2.65rem;
+        height: 2.65rem;
+        font-size: 1rem;
+      }
+
+      h3.principle-title {
+        font-size: clamp(1.05rem, 4.8vw, 1.28rem);
+        line-height: 1.4;
+      }
+
+      .toc-head h2 { font-size: 1.28rem; }
+
+      blockquote::before {
+        font-size: 2.25rem;
+        left: 0.4rem;
+      }
+
+      blockquote,
+      .verse {
+        padding: 1.1rem 1rem 1.1rem 1.15rem;
+        font-size: 1.05rem;
+      }
+    }
+
     @media (min-width: 600px) {
+      :root { --header-h: 3.75rem; }
+
       main { padding: 0 1.75rem 5.5rem; }
-      .site-header { padding: 0.65rem 1.75rem; }
+      .site-header {
+        flex-wrap: nowrap;
+        padding: 0.65rem 1.75rem;
+      }
+      .site-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       .cover { margin: 0 -1.75rem 2.5rem; padding: 3.5rem 2rem 3rem; }
-      #intro,
-      section[id^="p"] { padding: 2rem 1.75rem 1.75rem; }
+      #intro { padding: 2rem 1.75rem 1.75rem 2rem; }
+      section[id^="p"] { padding: 2rem 1.75rem 1.75rem 2rem; }
+      .toc { padding: 2rem 1.5rem 1.25rem 1.75rem; }
+      .principle-header {
+        grid-template-columns: 3.25rem minmax(0, 1fr);
+        column-gap: 1rem;
+      }
+      .principle-num {
+        width: 3.25rem;
+        height: 3.25rem;
+        font-size: 1.15rem;
+      }
     }
 
     @media print {
@@ -817,11 +1051,13 @@
 </head>
 <body class="lang-vi">
 <header class="site-header">
-    <span class="site-title en-only">Parenting Handbook</span>
-    <span class="site-title vi-only">Cẩm nang nuôi dạy con</span>
-    <span class="site-title ja-only">育児ハンドブック</span>
-    <span class="site-title ko-only">육아 핸드북</span>
-    <span class="site-title zh-only">育儿手册</span>
+    <div class="site-brand">
+      <span class="site-title en-only">Parenting Handbook</span>
+      <span class="site-title vi-only">Cẩm nang nuôi dạy con</span>
+      <span class="site-title ja-only">育児ハンドブック</span>
+      <span class="site-title ko-only">육아 핸드북</span>
+      <span class="site-title zh-only">育儿手册</span>
+    </div>
     <div class="lang-switch" role="group" aria-label="Language">
       <button type="button" data-lang="vi" aria-pressed="true">VI</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -834,54 +1070,52 @@
   <main>
     <!-- COVER -->
     <header class="cover">
-      <p class="cover-eyebrow en-only">Drawn from the Vesak Address, 2026</p>
-      <p class="cover-eyebrow vi-only">Trích Diễn văn Phật đản, 2026</p>
-      <!-- ANCHOR:cover-eyebrow -->
-<!-- INJECTED:cover-eyebrow -->
-<p class="cover-eyebrow ja-only">2026年・仏降誕会の法話より</p>
-<p class="cover-eyebrow ko-only">2026년 부처님 오신 날 법문에서 발췌</p>
-<p class="cover-eyebrow zh-only">摘自 2026 年佛诞开示</p>
-      <div class="en-only">
-        <h1>Parenting Handbook</h1>
-        <p class="subtitle">Raising Wise Children Who Contribute to the World</p>
-        <p class="meta">
-          <strong>Ten Principles for Nurturing Good Character</strong>
-          Namo Shakyamuni Buddha, Our Original Teacher
-        </p>
+      <div class="cover-block en-only">
+        <p class="cover-book">Parenting Handbook</p>
+        <div class="cover-art" aria-hidden="true"></div>
+        <h1 class="cover-title">Raising Wise Children<br>Who Contribute to the World</h1>
+        <hr class="cover-divider" aria-hidden="true">
+        <p class="cover-principles">Ten Principles for Nurturing Good Character</p>
+        <p class="cover-homage">Namo Shakyamuni Buddha, Our Original Teacher</p>
+        <p class="cover-source">Drawn from the Vesak Address, 2026</p>
       </div>
-      <div class="vi-only" lang="vi">
-        <h1>Cẩm nang nuôi dạy con</h1>
-        <p class="subtitle">Giúp Trẻ Thông Minh<br>và Thành Người Có Ích<br>Cho Đời</p>
-        <p class="meta">
-          <strong>Mười điều mấu chốt trong việc dạy trẻ nên người</strong>
-          Nam Mô Bổn Sư Thích Ca Mâu Ni Phật
-        </p>
+      <div class="cover-block vi-only" lang="vi">
+        <p class="cover-book">Cẩm nang nuôi dạy con</p>
+        <div class="cover-art" aria-hidden="true"></div>
+        <h1 class="cover-title">Giúp Trẻ Thông Minh<br>và Thành Người Có Ích<br>Cho Đời</h1>
+        <hr class="cover-divider" aria-hidden="true">
+        <p class="cover-principles">Mười điều mấu chốt trong việc dạy trẻ nên người</p>
+        <p class="cover-homage">Nam Mô Bổn Sư Thích Ca Mâu Ni Phật</p>
+        <p class="cover-source">Trích Diễn văn Phật đản, 2026</p>
       </div>
       <!-- ANCHOR:cover -->
 <!-- INJECTED:cover -->
-<div class="ja-only" lang="ja">
-        <h1>育児ハンドブック</h1>
-        <p class="subtitle">賢い子どもを育て、<br>世界に貢献する</p>
-        <p class="meta">
-          <strong>良い人格を育む十の原則</strong>
-          南無本師釈迦牟尼仏
-        </p>
+      <div class="cover-block ja-only" lang="ja">
+        <p class="cover-book">育児ハンドブック</p>
+        <div class="cover-art" aria-hidden="true"></div>
+        <h1 class="cover-title">賢い子どもを育て、<br>世界に貢献する</h1>
+        <hr class="cover-divider" aria-hidden="true">
+        <p class="cover-principles">良い人格を育む十の原則</p>
+        <p class="cover-homage">南無本師釈迦牟尼仏</p>
+        <p class="cover-source">2026年・仏降誕会の法話より</p>
       </div>
-      <div class="ko-only" lang="ko">
-        <h1>육아 핸드북</h1>
-        <p class="subtitle">지혜로운 자녀를 키워<br>세상에 기여하게 하기</p>
-        <p class="meta">
-          <strong>바른 인격을 기르는 열 가지 원칙</strong>
-          남무 본사 석가모니불
-        </p>
+      <div class="cover-block ko-only" lang="ko">
+        <p class="cover-book">육아 핸드북</p>
+        <div class="cover-art" aria-hidden="true"></div>
+        <h1 class="cover-title">지혜로운 자녀를 키워<br>세상에 기여하게 하기</h1>
+        <hr class="cover-divider" aria-hidden="true">
+        <p class="cover-principles">바른 인격을 기르는 열 가지 원칙</p>
+        <p class="cover-homage">남무 본사 석가모니불</p>
+        <p class="cover-source">2026년 부처님 오신 날 법문에서 발췌</p>
       </div>
-      <div class="zh-only" lang="zh-Hans">
-        <h1>育儿手册</h1>
-        <p class="subtitle">培养聪慧的孩子<br>让他们有益于世间</p>
-        <p class="meta">
-          <strong>培育善良品格的十条要义</strong>
-          南无本师释迦牟尼佛
-        </p>
+      <div class="cover-block zh-only" lang="zh-Hans">
+        <p class="cover-book">育儿手册</p>
+        <div class="cover-art" aria-hidden="true"></div>
+        <h1 class="cover-title">培养聪慧的孩子<br>让他们有益于世间</h1>
+        <hr class="cover-divider" aria-hidden="true">
+        <p class="cover-principles">培育善良品格的十条要义</p>
+        <p class="cover-homage">南无本师释迦牟尼佛</p>
+        <p class="cover-source">摘自 2026 年佛诞开示</p>
       </div>
     </header>
 
@@ -2053,6 +2287,71 @@
           setLang(btn.getAttribute("data-lang"));
         });
       });
+
+      (function initIcons() {
+        var SPRITE = "assets/sprites.svg";
+        var PILLAR_ICONS = ["icon-teach", "icon-practice", "icon-say"];
+        var LABEL_ICONS = ["icon-teach", "icon-practice", "icon-say"];
+
+        var VIEWBOX = {
+          "icon-water-drop": "0 0 64 80",
+          "icon-teach": "0 0 48 48", "icon-practice": "0 0 48 48", "icon-say": "0 0 48 48",
+          "deco-lotus-sm": "0 0 24 24"
+        };
+
+        function svgUse(id, className) {
+          var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          svg.setAttribute("class", "icon " + className);
+          svg.setAttribute("aria-hidden", "true");
+          if (VIEWBOX[id]) svg.setAttribute("viewBox", VIEWBOX[id]);
+          var use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+          use.setAttribute("href", SPRITE + "#" + id);
+          svg.appendChild(use);
+          return svg;
+        }
+
+        document.querySelectorAll(".cover-art").forEach(function (slot) {
+          if (slot.firstChild) return;
+          var drop = svgUse("icon-water-drop", "cover-art");
+          drop.classList.remove("icon");
+          drop.classList.add("cover-art");
+          slot.appendChild(drop);
+        });
+
+        var brand = document.querySelector(".site-brand");
+        if (brand && !brand.querySelector(".icon-brand")) {
+          brand.insertBefore(svgUse("deco-lotus-sm", "icon-brand"), brand.firstChild);
+        }
+
+        document.querySelectorAll(".toc-head").forEach(function (head) {
+          if (head.querySelector(".toc-head-inner")) return;
+          var h2 = head.querySelector("h2");
+          var sub = head.querySelector(".toc-sub");
+          if (!h2) return;
+          var wrap = document.createElement("div");
+          wrap.className = "toc-head-inner";
+          wrap.appendChild(h2);
+          if (sub) wrap.appendChild(sub);
+          head.innerHTML = "";
+          head.appendChild(wrap);
+        });
+
+        document.querySelectorAll(".intro-pillars").forEach(function (box) {
+          box.querySelectorAll(".pillar").forEach(function (pillar, i) {
+            if (pillar.querySelector(".icon-pillar")) return;
+            var iconId = PILLAR_ICONS[Math.min(i, PILLAR_ICONS.length - 1)];
+            pillar.insertBefore(svgUse(iconId, "icon-pillar"), pillar.firstChild);
+          });
+        });
+
+        document.querySelectorAll("section[id^='p']").forEach(function (sec) {
+          sec.querySelectorAll(".label").forEach(function (label, i) {
+            if (label.querySelector(".icon-label")) return;
+            var iconId = LABEL_ICONS[Math.min(i, LABEL_ICONS.length - 1)];
+            label.insertBefore(svgUse(iconId, "icon-label"), label.firstChild);
+          });
+        });
+      })();
 
       document.querySelectorAll("#intro, .toc, .closing").forEach(function (el) {
         el.classList.add("is-visible");
