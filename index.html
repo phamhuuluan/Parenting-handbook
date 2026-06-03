@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parenting Handbook · Cẩm nang nuôi dạy con</title>
+  <meta name="description" content="Ten principles for nurturing good character — reader in English, Vietnamese, Japanese, Korean, and Chinese.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3eb;
+      --bg-pattern: #efe8da;
+      --surface: #fffcf7;
+      --text: #2a2622;
+      --muted: #5a534c;
+      --accent: #9a7224;
+      --accent-deep: #6b4f18;
+      --accent-soft: #e8dcc4;
+      --lotus: #c4a574;
+      --border: #ddd4c4;
+      --quote-bg: linear-gradient(135deg, #f5efe3 0%, #ebe3d4 100%);
+      --card-shadow: 0 4px 24px rgba(42, 38, 34, 0.07);
+      --header-shadow: 0 1px 0 var(--border);
+      --max: 52rem;
+      --glow: rgba(201, 169, 98, 0.35);
+      --header-h: 3.5rem;
+      --font-en: "Source Serif 4", Georgia, serif;
+      --font-en-display: "Cormorant Garamond", Georgia, serif;
+      --font-vi: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+      --font-vi-display: "Lora", "Be Vietnam Pro", Georgia, serif;
+      --font-ja: "Noto Sans JP", "Hiragino Sans", sans-serif;
+      --font-ko: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      --font-zh: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + 1.25rem);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-en);
+      font-size: 1.125rem;
+      line-height: 1.72;
+      color: var(--text);
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(196, 165, 116, 0.15), transparent),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-pattern) 100%);
+      background-attachment: fixed;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    body.lang-vi {
+      font-family: var(--font-vi);
+      font-size: 1.0625rem;
+      line-height: 1.78;
+      letter-spacing: 0.01em;
+    }
+
+    body.lang-ja {
+      font-family: var(--font-ja);
+      font-size: 1.0625rem;
+      line-height: 1.85;
+    }
+
+    body.lang-ko {
+      font-family: var(--font-ko);
+      font-size: 1.0625rem;
+      line-height: 1.82;
+    }
+
+    body.lang-zh {
+      font-family: var(--font-zh);
+      font-size: 1.0625rem;
+      line-height: 1.85;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 1.25rem;
+      min-height: var(--header-h);
+      background: rgba(255, 252, 247, 0.88);
+      backdrop-filter: blur(12px) saturate(1.2);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--header-shadow);
+    }
+
+    .site-title {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent-deep);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    body.lang-vi .site-title { font-family: var(--font-vi); }
+    body.lang-ja .site-title { font-family: var(--font-ja); }
+    body.lang-ko .site-title { font-family: var(--font-ko); }
+    body.lang-zh .site-title { font-family: var(--font-zh); }
+
+    .lang-switch {
+      display: flex;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 3px;
+      max-width: min(100%, 22rem);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 4px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      font-family: var(--font-vi);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.35rem 0.55rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 480px) {
+      .lang-switch { border-radius: 999px; max-width: none; }
+      .lang-switch button {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.65rem;
+        border-radius: 999px;
+      }
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(107, 79, 24, 0.25);
+    }
+
+    .lang-switch button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem 5rem;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 2rem 1.5rem 2.5rem;
+      margin: 0 -1.25rem 2.5rem;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% 0%, rgba(201, 169, 98, 0.12), transparent 55%),
+        linear-gradient(165deg, #fffdf9 0%, var(--surface) 45%, #f3ebe0 100%);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 1rem;
+    }
+
+    body.lang-vi .cover-eyebrow,
+    body.lang-ja .cover-eyebrow,
+    body.lang-ko .cover-eyebrow,
+    body.lang-zh .cover-eyebrow {
+      font-family: inherit;
+      text-transform: none;
+      letter-spacing: 0.04em;
+    }
+
+    body.lang-vi .cover-eyebrow { font-family: var(--font-vi); }
+    body.lang-ja .cover-eyebrow { font-family: var(--font-ja); }
+    body.lang-ko .cover-eyebrow { font-family: var(--font-ko); }
+    body.lang-zh .cover-eyebrow { font-family: var(--font-zh); }
+
+    .cover::before,
+    .cover::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(14rem, 50%);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lotus), transparent);
+    }
+
+    .cover::before { top: 1rem; }
+    .cover::after { bottom: 1rem; }
+
+    .cover h1 {
+      font-family: var(--font-en-display);
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      color: var(--accent-deep);
+      letter-spacing: 0.02em;
+    }
+
+    body.lang-vi .cover h1 {
+      font-family: var(--font-vi-display);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    body.lang-ja .cover h1,
+    body.lang-ko .cover h1,
+    body.lang-zh .cover h1 {
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .cover .subtitle {
+      font-family: var(--font-en-display);
+      font-size: clamp(1.2rem, 3.8vw, 1.55rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.25rem;
+      line-height: 1.4;
+    }
+
+    body.lang-vi .cover .subtitle {
+      font-family: var(--font-vi-display);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    body.lang-ja .cover .subtitle,
+    body.lang-ko .cover .subtitle,
+    body.lang-zh .cover .subtitle {
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .cover .meta {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 28rem;
+      margin: 0 auto;
+    }
+
+    .cover .meta strong {
+      display: block;
+      color: var(--accent-deep);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    body.lang-vi .cover .meta,
+    body.lang-vi .cover .meta strong {
+      font-family: var(--font-vi);
+    }
+
+    #intro {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+    }
+
+    section[id^="p"] {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--card-shadow);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    section[id^="p"].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #intro.is-visible,
+    .toc.is-visible,
+    .closing.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #intro,
+    .toc,
+    .closing {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .intro-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.75rem 0 0;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    @media (min-width: 560px) {
+      .intro-pillars { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .pillar {
+      text-align: center;
+      padding: 1.25rem 1rem;
+      background: linear-gradient(180deg, #fff 0%, var(--accent-soft) 100%);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pillar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px var(--glow);
+    }
+
+    .pillar h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-deep);
+      margin: 0 0 0.35rem;
+    }
+
+    body.lang-vi .pillar h3 {
+      font-family: var(--font-vi);
+      font-size: 0.85rem;
+    }
+
+    .pillar p {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    body.lang-vi .pillar p { font-family: var(--font-vi); }
+
+    .toc-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc-list li {
+      counter-increment: toc;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list li:last-child { border-bottom: none; }
+
+    .toc-list a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.75rem;
+      padding: 1rem 0.75rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: left;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .toc-list a::before {
+      content: counter(toc);
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(145deg, var(--accent), var(--accent-deep));
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(107, 79, 24, 0.2);
+      font-family: var(--font-vi);
+    }
+
+    .toc-list .toc-label {
+      flex: 0 1 auto;
+      max-width: 28rem;
+    }
+
+    body.lang-vi .toc-list a {
+      font-family: var(--font-vi);
+    }
+
+    body.lang-vi .toc-list .toc-label {
+      font-family: var(--font-vi-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    body.lang-en .toc-list a {
+      font-family: var(--font-en);
+      font-size: 0.975rem;
+    }
+
+    body.lang-en .toc-list .toc-label {
+      font-family: var(--font-en-display);
+      font-weight: 600;
+    }
+
+    .toc-list a:hover {
+      color: var(--accent-deep);
+      background: rgba(232, 220, 196, 0.35);
+    }
+
+    .toc-list a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 8px;
+    }
+
+    blockquote {
+      position: relative;
+    }
+
+    blockquote::before {
+      content: "“";
+      position: absolute;
+      top: -0.15rem;
+      left: 0.65rem;
+      font-family: var(--font-en-display);
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--lotus);
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    body.lang-vi blockquote::before {
+      font-family: var(--font-vi-display);
+    }
+
+    blockquote p { padding-left: 0.5rem; }
+
+    section { margin-bottom: 2rem; }
+
+    h2 {
+      font-family: var(--font-en-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 1.1rem;
+      color: var(--accent-deep);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+
+    body.lang-vi h2 {
+      font-family: var(--font-vi-display);
+      font-size: 1.5rem;
+    }
+
+    h3.principle-title {
+      font-family: var(--font-en-display);
+      font-size: 1.45rem;
+      margin: 0;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    body.lang-vi h3.principle-title {
+      font-family: var(--font-vi-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .principle-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      margin: 0 0 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--accent-soft);
+      text-align: left;
+    }
+
+    .principle-header .principle-title {
+      flex: 0 1 auto;
+      max-width: 100%;
+    }
+
+    .principle-num {
+      flex-shrink: 0;
+      width: 2.75rem;
+      height: 2.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, var(--accent) 0%, var(--accent-deep) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      border-radius: 50%;
+      box-shadow: 0 3px 12px rgba(107, 79, 24, 0.3);
+      font-family: var(--font-vi);
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin: 1.5rem 0 0.65rem;
+      padding: 0.35rem 0.65rem;
+      background: var(--accent-soft);
+      border-radius: 6px;
+    }
+
+    body.lang-vi .label {
+      font-family: var(--font-vi);
+      letter-spacing: 0.08em;
+      text-transform: none;
+      font-size: 0.75rem;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    .vi-only[lang="vi"],
+    .vi-only {
+      font-family: var(--font-vi);
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.25rem 1.25rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .toc-head {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--accent-soft);
+    }
+
+    .toc-head h2 {
+      border: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      color: var(--accent-deep);
+      letter-spacing: 0.02em;
+    }
+
+    body.lang-vi .toc-head h2 {
+      font-family: var(--font-vi-display);
+      font-size: 1.35rem;
+    }
+
+    .toc-head .toc-sub {
+      margin: 0.5rem 0 0;
+      font-size: 0.875rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    body.lang-vi .toc-head .toc-sub {
+      font-family: var(--font-vi);
+    }
+
+    ul.practice-list {
+      margin: 0 0 1rem;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul.practice-list li {
+      position: relative;
+      margin: 0.5rem 0;
+      padding-left: 1.35rem;
+      line-height: 1.65;
+    }
+
+    body.lang-vi ul.practice-list li { line-height: 1.75; }
+
+    ul.practice-list li::before {
+      content: "◦";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    blockquote,
+    .verse {
+      margin: 1.25rem 0;
+      padding: 1.25rem 1.35rem;
+      background: var(--quote-bg);
+      border: 1px solid var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      font-family: var(--font-en-display);
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    body.lang-vi blockquote,
+    body.lang-vi .verse {
+      font-family: var(--font-vi-display);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+
+    blockquote p,
+    .verse p { margin: 0 0 0.35rem; }
+    blockquote p:last-child,
+    .verse p:last-child { margin-bottom: 0; }
+
+    .dialogue {
+      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .dialogue .line {
+      margin: 0;
+      padding: 1rem 1.1rem;
+      background: rgba(232, 220, 196, 0.35);
+      border-radius: 10px;
+      border-left: 3px solid var(--lotus);
+      line-height: 1.65;
+    }
+
+    body.lang-vi .dialogue .line {
+      font-family: var(--font-vi);
+      line-height: 1.75;
+    }
+
+    .dialogue .exchange {
+      margin: 0;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 2.75rem 1.5rem 3rem;
+      margin-top: 0.5rem;
+      background: linear-gradient(180deg, var(--surface) 0%, #f5efe6 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .closing h2 {
+      border: none;
+      padding-bottom: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .closing-verse {
+      margin: 0 auto 2.25rem;
+      padding: 0 0.5rem;
+      max-width: 28rem;
+      font-family: var(--font-en-display);
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.85;
+      color: #6b5a45;
+    }
+
+    .closing-verse p {
+      margin: 0 0 0.65rem;
+    }
+
+    .closing-verse p:last-child {
+      margin-bottom: 0;
+    }
+
+    body.lang-vi .closing-verse {
+      font-family: var(--font-vi-display);
+      font-size: 1.125rem;
+      line-height: 1.9;
+      color: #5c5044;
+    }
+
+    .buddha-homage {
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      max-width: 32rem;
+      border-top: 1px solid var(--accent-soft);
+      font-family: "Noto Serif", "Cormorant Garamond", Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      color: #121110;
+    }
+
+    body.lang-vi .buddha-homage {
+      font-family: "Noto Serif", "Lora", var(--font-vi);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      line-height: 1.65;
+      letter-spacing: 0.03em;
+      color: #0a0908;
+    }
+
+    .back-top {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--accent-deep);
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.2s;
+      z-index: 50;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-top:hover { transform: translateY(-2px); }
+
+    .en-only, .vi-only, .ja-only, .ko-only, .zh-only { display: none !important; }
+
+    body.lang-en .en-only { display: block !important; }
+    body.lang-en span.en-only { display: inline !important; }
+    body.lang-vi .vi-only { display: block !important; }
+    body.lang-vi span.vi-only { display: inline !important; }
+    body.lang-ja .ja-only { display: block !important; }
+    body.lang-ja span.ja-only { display: inline !important; }
+    body.lang-ko .ko-only { display: block !important; }
+    body.lang-ko span.ko-only { display: inline !important; }
+    body.lang-zh .zh-only { display: block !important; }
+    body.lang-zh span.zh-only { display: inline !important; }
+
+    @media (min-width: 600px) {
+      main { padding: 0 1.75rem 5.5rem; }
+      .site-header { padding: 0.65rem 1.75rem; }
+      .cover { margin: 0 -1.75rem 2.5rem; padding: 3.5rem 2rem 3rem; }
+      #intro,
+      section[id^="p"] { padding: 2rem 1.75rem 1.75rem; }
+    }
+
+    @media print {
+      .site-header, .back-top { display: none; }
+      body { background: #fff; }
+      section[id^="p"], #intro, .toc, .closing {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body class="lang-vi">
+<header class="site-header">
+    <span class="site-title en-only">Parenting Handbook</span>
+    <span class="site-title vi-only">Cẩm nang nuôi dạy con</span>
+    <span class="site-title ja-only">育児ハンドブック</span>
+    <span class="site-title ko-only">육아 핸드북</span>
+    <span class="site-title zh-only">育儿手册</span>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="vi" aria-pressed="true">VI</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- COVER -->
+    <header class="cover">
+      <p class="cover-eyebrow en-only">Drawn from the Vesak Address, 2026</p>
+      <p class="cover-eyebrow vi-only">Trích Diễn văn Phật đản, 2026</p>
+      <!-- ANCHOR:cover-eyebrow -->
+<!-- INJECTED:cover-eyebrow -->
+<p class="cover-eyebrow ja-only">2026年・仏降誕会の法話より</p>
+<p class="cover-eyebrow ko-only">2026년 부처님 오신 날 법문에서 발췌</p>
+<p class="cover-eyebrow zh-only">摘自 2026 年佛诞开示</p>
+      <div class="en-only">
+        <h1>Parenting Handbook</h1>
+        <p class="subtitle">Raising Wise Children Who Contribute to the World</p>
+        <p class="meta">
+          <strong>Ten Principles for Nurturing Good Character</strong>
+          Namo Shakyamuni Buddha, Our Original Teacher
+        </p>
+      </div>
+      <div class="vi-only" lang="vi">
+        <h1>Cẩm nang nuôi dạy con</h1>
+        <p class="subtitle">Giúp Trẻ Thông Minh<br>và Thành Người Có Ích<br>Cho Đời</p>
+        <p class="meta">
+          <strong>Mười điều mấu chốt trong việc dạy trẻ nên người</strong>
+          Nam Mô Bổn Sư Thích Ca Mâu Ni Phật
+        </p>
+      </div>
+      <!-- ANCHOR:cover -->
+<!-- INJECTED:cover -->
+<div class="ja-only" lang="ja">
+        <h1>育児ハンドブック</h1>
+        <p class="subtitle">賢い子どもを育て、<br>世界に貢献する</p>
+        <p class="meta">
+          <strong>良い人格を育む十の原則</strong>
+          南無本師釈迦牟尼仏
+        </p>
+      </div>
+      <div class="ko-only" lang="ko">
+        <h1>육아 핸드북</h1>
+        <p class="subtitle">지혜로운 자녀를 키워<br>세상에 기여하게 하기</p>
+        <p class="meta">
+          <strong>바른 인격을 기르는 열 가지 원칙</strong>
+          남무 본사 석가모니불
+        </p>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <h1>育儿手册</h1>
+        <p class="subtitle">培养聪慧的孩子<br>让他们有益于世间</p>
+        <p class="meta">
+          <strong>培育善良品格的十条要义</strong>
+          南无本师释迦牟尼佛
+        </p>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <div class="en-only">
+        <h2>A Note for Parents</h2>
+        <p>Most of us are not born with transcendent character. We become good by being taught, by learning and training patiently over a long time, so that unwholesome impulses cannot pull us toward wrongdoing. Humanity still moves forward precisely because it knows how to educate: what is good is preserved and passed from one generation to the next.</p>
+        <p>Today we are fortunate to know the Dharma and to know how to cultivate ourselves. But what will become of the children who come after us if they are not properly taught? What will become of our families, our nation, and our world if the young grow up not through careful upbringing, but through the pull of peers and the endless scroll of short videos?</p>
+        <p>To bring a child into the world and raise them into a virtuous, useful person is to gather great merit; to bring a child into the world and fail to teach them is to carry a heavy debt. This handbook gathers ten principles to keep close as you raise your child. Read them slowly, return to them often, and let them ripen in daily life — in every word, every gesture, every quiet thought.</p>
+        <h2>How to Use This Handbook</h2>
+        <p>Each principle has three parts. <strong>The teaching</strong> explains why it matters. <strong>In practice</strong> offers small, concrete habits to build day by day. <strong>Try saying</strong> gives words you can model and rehearse with your child.</p>
+        <p>Nothing here is taught once. These truths are repeated gently, day after day, until they soak into a child’s heart and grow there into countless other virtues. You are not pressing; you are planting.</p>
+        <div class="intro-pillars">
+          <div class="pillar"><h3>The teaching</h3><p>Why each virtue matters.</p></div>
+          <div class="pillar"><h3>In practice</h3><p>Small daily habits.</p></div>
+          <div class="pillar"><h3>Try saying</h3><p>Words to model with your child.</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <h2>Lời ngỏ cùng cha mẹ</h2>
+        <p>Hầu hết chúng ta đều không có được cốt cách siêu phàm từ trước, mà phải vất vả học tập rèn luyện rất nhiều để không bị bản năng xấu xa kéo mình đi về tội lỗi. Loài người còn tiến bộ vì còn biết giáo dục và rèn luyện; điều tốt đẹp được giữ gìn lan truyền từ thế hệ này sang thế hệ kia.</p>
+        <p>Hôm nay ta may mắn biết được Phật Pháp nên biết rèn luyện tu dưỡng, nhưng còn những thế hệ con cháu sau này sẽ ra sao nếu không được dạy dỗ nên người? Gia đình ta, dân tộc ta, thế giới này sẽ ra sao nếu lớp trẻ không được dạy dỗ kỹ lưỡng mà chỉ sống theo sự rủ rê của bạn bè và các clip ngắn trên mạng?</p>
+        <p>Sinh con ra mà giáo dục con thành người tốt, lớn lên làm nhiều việc có ích cho đời, thì cha mẹ cũng sẽ có phước; sinh con mà không thể dạy thì cha mẹ sẽ mang tội. Cẩm nang này góp lại mười điều để cha mẹ giữ bên mình trên hành trình nuôi con. Xin đọc thật chậm, trở lại thường xuyên, và để những đạo lý ấy chín dần trong đời sống hằng ngày — trong từng cách ăn nói, từng cử chỉ, từng ý nghĩ sâu kín.</p>
+        <h2>Cách dùng cẩm nang</h2>
+        <p>Mỗi điều gồm ba phần. <strong>Lời dạy</strong> nói vì sao điều ấy quan trọng. <strong>Thực hành</strong> gợi những thói quen nhỏ, cụ thể để vun đắp mỗi ngày. <strong>Lời nên tập nói</strong> cho sẵn những câu để cha mẹ làm gương và cùng con tập.</p>
+        <p>Không điều nào chỉ dạy một lần. Ta cứ nói về những đạo lý ấy mãi, ngày này qua ngày kia, lâu dần chúng thấm vào tâm hồn trẻ và sinh sôi nảy nở thành vô số điều đạo đức khác. Ta không ép, ta gieo trồng.</p>
+        <div class="intro-pillars">
+          <div class="pillar"><h3>Lời dạy</h3><p>Vì sao điều ấy quan trọng.</p></div>
+          <div class="pillar"><h3>Thực hành</h3><p>Thói quen nhỏ, cụ thể mỗi ngày.</p></div>
+          <div class="pillar"><h3>Lời nên tập nói</h3><p>Câu mẫu để làm gương cùng con.</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:intro -->
+<!-- INJECTED:intro -->
+<div class="ja-only" lang="ja">
+        <h2>保護者の方へ</h2>
+        <p>私たちの多くは、生まれながらに高い品格を備えているわけではありません。教えを受け、長い年月をかけて学び鍛え、不善な衝動に引きずられないようにして、人は善くなっていきます。人類が前進し続けているのは、教育の方法を知っているからです。善いものは守られ、世代から世代へと伝えられます。</p>
+        <p>今日、私たちは仏法を知り、自己を磨く方法を知る幸運があります。しかし、子どもたちがきちんと教えられなければ、後の世代はどうなるでしょうか。若者が丁寧な育てにではなく、友人の誘いや短い動画の流れに身を任せて育つなら、家族も、国も、世界もどうなるでしょうか。</p>
+        <p>子をもうけ、徳のある有用な人に育てることは大きな功徳を積むことです。子をもうけて教えられないことは、重い負いとなります。本ハンドブックは、子育ての道のりで心に留めておきたい十の原則をまとめたものです。ゆっくり読み、何度も戻り、日々の生活の中で熟らしてください——言葉の一つ一つ、仕草、静かな思いの中で。</p>
+        <h2>本書の使い方</h2>
+        <p>各原則は三つの部分からなります。<strong>教え</strong>は、その徳がなぜ大切かを説きます。<strong>実践</strong>は、日々築く小さな具体的な習慣を示します。<strong>言葉の例</strong>は、お手本となり、子どもと一緒に練習できる言葉を示します。</p>
+        <p>ここにあることは、一度教えて終わりではありません。これらの真理を、日々やさしく繰り返し、子どもの心に染み込ませ、そこから無数の他の美徳が育つようにします。押しつけるのではなく、蒔くのです。</p>
+        <div class="intro-pillars">
+          <div class="pillar"><h3>教え</h3><p>なぜその徳が大切か。</p></div>
+          <div class="pillar"><h3>実践</h3><p>日々の小さな習慣。</p></div>
+          <div class="pillar"><h3>言葉の例</h3><p>子どもと練習する言葉。</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <h2>부모님께 드리는 말씀</h2>
+        <p>우리 대부분은 태어날 때부터 뛰어난 인격을 지닌 것이 아닙니다. 가르침을 받고 오랜 시간 학습하며 수련하여, 불선한 충동이 우리를 악으로 끌지 못하게 함으로써 선해집니다. 인류가 나아가는 것은 교육의 방법을 알기 때문입니다. 선한 것은 지켜지고 세대에서 세대로 전해집니다.</p>
+        <p>오늘 우리는 불법을 알고 자신을 닦는 법을 아는 행운이 있습니다. 그러나 자녀들이 바르게 가르침받지 못하면 후손은 어떻게 될까요? 젊은이들이 세심한 양육이 아니라 친구의 이끌림과 짧은 영상의 흐름 속에서 자라면, 가정과 나라, 세상은 어떻게 될까요?</p>
+        <p>자녀를 낳아 덕 있는 유용한 사람으로 키우는 것은 큰 공덕을 쌓는 일입니다. 낳아 놓고 가르치지 못하면 무거운 업을 짊어집니다. 이 핸드북은 자녀를 키우는 길에서 곁에 두실 열 가지 원칙을 모았습니다. 천천히 읽고 자주 돌아오시며, 말 한마디, 몸짓, 고요한 생각 속에서 익혀 가시기 바랍니다.</p>
+        <h2>이 책을 읽는 방법</h2>
+        <p>각 원칙은 세 부분으로 이루어집니다. <strong>가르침</strong>은 그 덕이 왜 중요한지 설명합니다. <strong>실천</strong>은 매일 쌓아 갈 작고 구체적인 습관을 제안합니다. <strong>말해 보기</strong>는 본이 되어 자녀와 함께 연습할 말을 드립니다.</p>
+        <p>여기 있는 것은 한 번 가르치고 끝이 아닙니다. 이 진리를 날마다 부드럽게 반복하여 자녀의 마음에 스며들게 하고, 그곳에서 수많은 다른 덕이 자라게 합니다. 억누르는 것이 아니라 심는 것입니다.</p>
+        <div class="intro-pillars">
+          <div class="pillar"><h3>가르침</h3><p>그 덕이 왜 중요한지.</p></div>
+          <div class="pillar"><h3>실천</h3><p>매일의 작은 습관.</p></div>
+          <div class="pillar"><h3>말해 보기</h3><p>자녀와 연습할 말.</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <h2>致父母</h2>
+        <p>我们大多数人并非生来就有超凡的品格，而是要经过长期的学习与磨练，才不至于被不善的冲动牵向过错。人类能够进步，正因为懂得教育：善的美好得以保存，代代相传。</p>
+        <p>今日我们有幸认识佛法，懂得修养自身。但若子女得不到妥善教导，后代将会如何？若年轻人不是在细心教养中成长，而是随同伴的引诱与短视频的洪流漂流，我们的家庭、民族与世界又将如何？</p>
+        <p>生育子女并将其教养成有德有用之人，能积聚大功德；生育而不教，则背负重债。本手册汇集十条原则，供您在养育儿女的路上常伴左右。请慢慢阅读，时常回顾，让它们在每日生活中成熟——在每一句话、每一个举动、每一份静思之中。</p>
+        <h2>如何使用本手册</h2>
+        <p>每一条包含三部分。<strong>教诲</strong>说明其为何重要。<strong>实践</strong>提供可逐日培养的小而具体的习惯。<strong>可练习的话</strong>给出您可作榜样并与孩子一起演练的用语。</p>
+        <p>此处所教并非一次即可。请日复一日温和地重复这些道理，使其渗入孩子心中，并从中生出无数其他美德。您不是在施压，而是在播种。</p>
+        <div class="intro-pillars">
+          <div class="pillar"><h3>教诲</h3><p>为何该德重要。</p></div>
+          <div class="pillar"><h3>实践</h3><p>每日小习惯。</p></div>
+          <div class="pillar"><h3>可练习的话</h3><p>与孩子示范的用语。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-head en-only">
+        <h2>The Ten Principles</h2>
+        <p class="toc-sub">Tap a principle to read</p>
+      </div>
+      <div class="toc-head vi-only">
+        <h2>Mười điều mấu chốt</h2>
+        <p class="toc-sub">Chạm vào từng điều để đọc</p>
+      </div>
+      <ol class="toc-list en-only">
+        <li><a href="#p1"><span class="toc-label">Teach Respect</span></a></li>
+        <li><a href="#p2"><span class="toc-label">Cultivate Compassion and the Desire to Help</span></a></li>
+        <li><a href="#p3"><span class="toc-label">Never Be Satisfied — Always Strive to Do Better</span></a></li>
+        <li><a href="#p4"><span class="toc-label">Practice Humility — Let Others Receive the Praise</span></a></li>
+        <li><a href="#p5"><span class="toc-label">Never Mock or Criticize with Contempt</span></a></li>
+        <li><a href="#p6"><span class="toc-label">Be Discerning about Peer Influence</span></a></li>
+        <li><a href="#p7"><span class="toc-label">Acknowledge Faults and Accept Correction</span></a></li>
+        <li><a href="#p8"><span class="toc-label">Cultivate Equanimity in the Face of Adversity</span></a></li>
+        <li><a href="#p9"><span class="toc-label">Teach Children to Meditate</span></a></li>
+        <li><a href="#p10"><span class="toc-label">Nurture Great Aspirations and a Sense of Service</span></a></li>
+      </ol>
+      <ol class="toc-list vi-only">
+        <li><a href="#p1"><span class="toc-label">Lòng tôn trọng, kính trọng, tôn kính</span></a></li>
+        <li><a href="#p2"><span class="toc-label">Lòng thương yêu giúp đỡ mọi người</span></a></li>
+        <li><a href="#p3"><span class="toc-label">Không tự mãn, luôn cố gắng hơn nữa</span></a></li>
+        <li><a href="#p4"><span class="toc-label">Khiêm cung kín đáo, không khoe khoang</span></a></li>
+        <li><a href="#p5"><span class="toc-label">Không chê bai, khinh miệt</span></a></li>
+        <li><a href="#p6"><span class="toc-label">Biết chọn bạn mà chơi</span></a></li>
+        <li><a href="#p7"><span class="toc-label">Biết nhận lỗi, biết phục thiện</span></a></li>
+        <li><a href="#p8"><span class="toc-label">Bình thản trước nghịch cảnh</span></a></li>
+        <li><a href="#p9"><span class="toc-label">Tập ngồi thiền</span></a></li>
+        <li><a href="#p10"><span class="toc-label">Ước mơ lớn và lòng phụng sự</span></a></li>
+      </ol>
+      <!-- ANCHOR:toc -->
+<!-- INJECTED:toc -->
+<div class="toc-head ja-only">
+        <h2>十の原則</h2>
+        <p class="toc-sub">項目をタップして読む</p>
+      </div>
+      <div class="toc-head ko-only">
+        <h2>열 가지 원칙</h2>
+        <p class="toc-sub">항목을 눌러 읽기</p>
+      </div>
+      <div class="toc-head zh-only">
+        <h2>十条要义</h2>
+        <p class="toc-sub">点选条目阅读</p>
+      </div>
+      <ol class="toc-list ja-only">
+        <li><a href="#p1"><span class="toc-label">敬意を教える</span></a></li>
+        <li><a href="#p2"><span class="toc-label">慈悲と助けたい心を育てる</span></a></li>
+        <li><a href="#p3"><span class="toc-label">満足せず、常により良く努める</span></a></li>
+        <li><a href="#p4"><span class="toc-label">謙虚に——誉れは人に譲る</span></a></li>
+        <li><a href="#p5"><span class="toc-label">嘲笑や軽蔑の批判をしない</span></a></li>
+        <li><a href="#p6"><span class="toc-label">友人の影響を見極める</span></a></li>
+        <li><a href="#p7"><span class="toc-label">過ちを認め、諫めを受け入れる</span></a></li>
+        <li><a href="#p8"><span class="toc-label">逆境にあっても心を安定させる</span></a></li>
+        <li><a href="#p9"><span class="toc-label">子どもに瞑想を教える</span></a></li>
+        <li><a href="#p10"><span class="toc-label">大いなる志と奉仕の心を育てる</span></a></li>
+      </ol>
+      <ol class="toc-list ko-only">
+        <li><a href="#p1"><span class="toc-label">공경을 가르치기</span></a></li>
+        <li><a href="#p2"><span class="toc-label">자비와 돕고자 하는 마음 기르기</span></a></li>
+        <li><a href="#p3"><span class="toc-label">만족하지 말고 더 나아지기</span></a></li>
+        <li><a href="#p4"><span class="toc-label">겸손히—칭찬은 남에게</span></a></li>
+        <li><a href="#p5"><span class="toc-label">조롱·멸시하지 않기</span></a></li>
+        <li><a href="#p6"><span class="toc-label">친구의 영향을 분별하기</span></a></li>
+        <li><a href="#p7"><span class="toc-label">잘못 인정하고 권면 받기</span></a></li>
+        <li><a href="#p8"><span class="toc-label">역경 앞에서 마음을 고요히</span></a></li>
+        <li><a href="#p9"><span class="toc-label">자녀에게 명상 가르치기</span></a></li>
+        <li><a href="#p10"><span class="toc-label">큰 뜻과 봉사의 마음 기르기</span></a></li>
+      </ol>
+      <ol class="toc-list zh-only">
+        <li><a href="#p1"><span class="toc-label">教导恭敬</span></a></li>
+        <li><a href="#p2"><span class="toc-label">培养慈悲与助人之心</span></a></li>
+        <li><a href="#p3"><span class="toc-label">不满足，常求更好</span></a></li>
+        <li><a href="#p4"><span class="toc-label">谦卑——让他人受赞美</span></a></li>
+        <li><a href="#p5"><span class="toc-label">不嘲弄、不轻蔑批评</span></a></li>
+        <li><a href="#p6"><span class="toc-label">明辨同伴的影响</span></a></li>
+        <li><a href="#p7"><span class="toc-label">认错并接受规劝</span></a></li>
+        <li><a href="#p8"><span class="toc-label">逆境中保持安然</span></a></li>
+        <li><a href="#p9"><span class="toc-label">教孩子静坐禅修</span></a></li>
+        <li><a href="#p10"><span class="toc-label">培育大志与服务之心</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- PRINCIPLE 1 -->
+    <section id="p1">
+      <div class="principle-header">
+        <span class="principle-num">1</span>
+        <h3 class="principle-title en-only">Teach Respect</h3>
+        <h3 class="principle-title vi-only">Lòng tôn trọng, kính trọng, tôn kính</h3>
+        <!-- ANCHOR:p1-titles -->
+<!-- INJECTED:p1-titles -->
+<h3 class="principle-title ja-only">敬意を教える</h3>
+        <h3 class="principle-title ko-only">공경을 가르치기</h3>
+        <h3 class="principle-title zh-only">教导恭敬</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>The first virtue to teach a child is respect — for everyone around them, rich or poor; reverence for grandparents, parents, teachers, and elders; and above all, deep veneration for the Buddha and the awakened sages. This sense of respect is what forms a stable character that endures for life. Where children are taught the opposite — that adults must defer to them — their psychology is damaged from the very start, and they grow into adults who are defiant and a source of suffering for their family.</p>
+        <p>Children cannot yet grasp lofty philosophy; they need stories. Keep a store of tales about the Buddha and the Arahants and tell them again and again — the Buddha flying through the air, the Arahants subduing fearsome demons. Children love these dearly. Once a child loves hearing of the Buddha, teach them to bow and make offerings with sincerity before the Buddha image, at home or at the temple.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Speak to elders with proper courtesy; offer and receive objects with both hands.</li>
+          <li>Bow the head slightly when passing before an elder; keep a respectful expression when speaking with those older.</li>
+          <li>Speak kindly of respected people even in their absence — this earns merit; disparaging them harms one’s own good fortune.</li>
+          <li>Collect worthy stories — from books, the internet, and others — and tell them at bedtime instead of idle chatter.</li>
+        </ul>
+        <blockquote>
+          <p>A child who honours those above will, in time, be blessed to do much good.</p>
+          <p>A heart that holds the Buddha in reverence will be quietly sheltered by the devas.</p>
+        </blockquote>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Đạo đức đầu tiên cần dạy cho trẻ là lòng tôn trọng — tôn trọng mọi người chung quanh dù nghèo hay giàu; kính trọng ông bà, cha mẹ, thầy cô, người lớn tuổi; và đặc biệt là lòng tôn kính Phật cùng các bậc thánh siêu phàm. Tình cảm tôn trọng đó là yếu tố quan trọng để hình thành nhân cách ổn định cho trẻ lâu dài. Nhiều quốc gia dạy ngược lại — người lớn phải tôn trọng trẻ em — thế là tâm lý trẻ hỏng ngay từ đầu, lớn lên thành kẻ ngang ngược làm khổ gia đình.</p>
+        <p>Trẻ không đủ sức hiểu triết lý cao siêu, trẻ chỉ cần nghe kể chuyện. Cha mẹ phải thủ sẵn trong đầu vô số câu chuyện về Phật và các vị A la hán để kể cho con nghe mãi — Phật có thần thông bay lên, biến hóa, các vị A la hán thu phục la sát. Trẻ nghe chuyện Phật thích rồi thì dạy trẻ quỳ lạy lễ bái thành kính trước tôn tượng, ở nhà hoặc ở chùa.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Nói năng với người lớn phải dạ thưa; đưa và nhận đồ vật bằng hai tay.</li>
+          <li>Đi qua trước mặt người lớn khẽ cúi đầu; giữ nét mặt kính cẩn khi trò chuyện.</li>
+          <li>Dù ở sau lưng cũng nói lời kính ái về các bậc trên — nói tốt được phước, chê bai sau lưng hại phước mình.</li>
+          <li>Sưu tập câu chuyện cao quý từ sách vở, internet, bạn bè — kể cho trẻ thay vì chuyện tào lao.</li>
+        </ul>
+        <blockquote>
+          <p>Trẻ mà biết kính người trên</p>
+          <p>Sau này có phước làm nên nhiều điều.</p>
+          <p>Có lòng kính Phật trong tâm</p>
+          <p>Được chư thiên sẽ âm thầm chở che.</p>
+        </blockquote>
+      </div>
+      <!-- ANCHOR:p1 -->
+<!-- INJECTED:p1 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに最初に教えるべき徳は、敬意です——周りのすべての人への敬意、貧しきも富めるも；祖父母、父母、師、年長者への崇敬；そして何より、仏と覚者への深い敬仰。この敬意こそが、生涯続く安定した人格を形づくります。逆に、大人が子に従うべきだと教えると、心は初めから傷つき、反抗的な大人となり、家族の苦しみの源になります。</p>
+        <p>子どもは高い哲学をまだ理解できません。物語が必要です。仏と阿羅漢の話を蓄え、何度も語りましょう——仏が空を飛ぶ話、阿羅漢が怖ろしい魔を伏せる話。子どもはこれを深く愛します。仏の話を愛するようになったら、自宅でもお寺でも、仏像の前で誠心誠意礼拝し供物を捧げることを教えましょう。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>年長者には礼儀正しく話す；物の授受は両手で。</li>
+          <li>年長者の前を通るときは軽く頭を下げ；話すときは敬意ある表情を保つ。</li>
+          <li>その人がいなくても、敬うべき人については善く語る——善く語せば功徳、悪く語れば自分の福を損なう。</li>
+          <li>本やネット、人から立派な話を集め、寝る前に無駄話の代わりに語る。</li>
+        </ul>
+        <blockquote>
+          <p>上の人を敬う子は、やがて多くの善いことをなす福を得る。</p>
+          <p>心に仏への敬仰を抱く者は、諸天が静かに守ってくださる。</p>
+        </blockquote>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 처음 가르칠 덕은 공경입니다—주변 모든 이에 대한 공경, 가난하든 부유하든；조부모, 부모, 스승, 어른에 대한 경외；무엇보다 부처와 깨달으신 분들에 대한 깊은 존경. 이 공경이 평생 이어질 안정된 인격을 이룹니다. 거꾸로 어른이 아이에게 맞춰야 한다고 가르치면 마음이 처음부터 상하고, 반항적인 어른이 되어 가족의 고통이 됩니다.</p>
+        <p>아이들은 높은 철학을 아직 이해하지 못합니다. 이야기가 필요합니다. 부처와 아라한의 이야기를 쌓아 두고 반복하여 들려 주세요. 아이가 부처 이야기를 좋아하게 되면, 집이나 절에서 부처님 상 앞에 정성으로 절하고 공양하는 법을 가르치세요.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>어른에게 예의 바르게 말하기；물건은 두 손으로 주고받기.</li>
+          <li>어른 앞을 지날 때 고개를 살짝 숙이기；대화할 때 공경의 표정 유지.</li>
+          <li>그 사람이 없어도 존경할 이를 좋게 말하기—좋게 말하면 공덕, 헐뜯으면 자신의 복을 해침.</li>
+          <li>책, 인터넷, 사람들로부터 좋은 이야기를 모아 잠들기 전에 들려 주기.</li>
+        </ul>
+        <blockquote>
+          <p>윗사람을 공경하는 아이는 후에 많은 선한 일을 할 복을 얻는다.</p>
+          <p>마음에 부처를 공경하는 이는 천신이 조용히 보살펴 주신다.</p>
+        </blockquote>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教给孩子的第一项德行是恭敬——对周围每一个人，无论贫富；对祖父母、父母、师长、长辈的崇敬；尤其要对佛陀与觉者深怀敬仰。恭敬是形成稳定人格的关键。若反其道而行，教大人必须迁就孩子，心从一开始就坏了，长大成为悖逆之人，令家庭受苦。</p>
+        <p>孩子尚不能理解高深哲理，需要故事。储备佛与阿罗汉的故事，反复讲述——佛神通飞行、阿罗汉降伏凶魔。孩子会很爱听。一旦喜爱佛的故事，便教孩子在佛前，无论在家或寺中，至诚礼拜供养。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>与长辈说话有礼；递接物品用双手。</li>
+          <li>经过长辈面前微微低头；交谈时保持恭敬神情。</li>
+          <li>即使不在场，也善言敬重之人——善言积福，背后毁谤损福。</li>
+          <li>从书籍、网络、他人处收集善美故事，睡前讲述，代替闲谈。</li>
+        </ul>
+        <blockquote>
+          <p>知敬长上者，日后有福做诸多善事。</p>
+          <p>心中敬仰佛者，诸天会暗中护持。</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 2 -->
+    <section id="p2">
+      <div class="principle-header">
+        <span class="principle-num">2</span>
+        <h3 class="principle-title en-only">Cultivate Compassion and the Desire to Help</h3>
+        <h3 class="principle-title vi-only">Lòng thương yêu giúp đỡ mọi người</h3>
+        <!-- ANCHOR:p2-titles -->
+<!-- INJECTED:p2-titles -->
+<h3 class="principle-title ja-only">慈悲と助けたい心を育てる</h3>
+        <h3 class="principle-title ko-only">자비와 돕고자 하는 마음 기르기</h3>
+        <h3 class="principle-title zh-only">培养慈悲与助人之心</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Many children are born already self-centered, thinking only of their own benefit. Left unredirected, such a child grabs food from siblings, competes for grades over peers, and as an adult fights for privileges over colleagues — causing discord wherever they appear, and even neglecting their own aging parents. Their life drifts toward loneliness and suffering.</p>
+        <p>So cultivate love for people and creatures, little by little: sharing a piece of cake with a friend, scattering a handful of rice for the birds, using New Year’s gift money to help the poor. Speak of the altruistic spirit day after day, and the selfish tendency is gradually worn away while the generous heart grows.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Share food; feed birds and animals; give a portion of gift money to those in need.</li>
+          <li>At family meals, tell true stories of selfless kindness — they nourish a child’s soul.</li>
+        </ul>
+        <p><strong>Stories to keep:</strong> the child who carried a disabled classmate to school for years; volunteers who repaired a broken road; the man who planted trees until they became a forest; the family who moved their fence inward so the alley could be wider.</p>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Nhiều trẻ sinh ra đã mang tính ích kỷ, chỉ nghĩ đến lợi ích của mình. Nếu không được chuyển hóa, lớn lên trẻ thành mối bất hòa của gia đình: nhỏ thì giành ăn với anh chị em, vào lớp giành điểm số với bạn bè, lớn lên giành quyền lợi với đồng nghiệp — xuất hiện đâu gây rối đấy, thậm chí bất hiếu với cha mẹ. Cuộc đời trẻ rơi vào cô độc khổ sở.</p>
+        <p>Cha mẹ phải dạy tính thương người thương vật từng chút một: biết chia phần bánh cho bạn, rải ít gạo cho chim trời, lấy tiền lì xì tết để bố thí cho người nghèo. Ngày này qua ngày kia nói cho trẻ nghe về tâm vị tha, khuynh hướng ích kỷ bị bào mòn dần để tâm vị tha phát triển.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Chia phần ăn; cho chim, cho vật; trích tiền lì xì giúp người nghèo.</li>
+          <li>Trong bữa cơm gia đình, kể những câu chuyện thật về lòng vị tha — chúng nuôi nấng tâm hồn trẻ.</li>
+        </ul>
+        <p><strong>Chuyện nên nhớ:</strong> người cõng bạn tật nguyền đến trường suốt nhiều năm; người tình nguyện vá đường hư; người trồng cây thành rừng cho chim về làm tổ; gia đình lùi hàng rào cho con hẻm rộng thêm.</p>
+      </div>
+      <!-- ANCHOR:p2 -->
+<!-- INJECTED:p2 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>多くの子どもは生まれつき自己中心的で、自分の利益だけを考えます。そのままにすると、兄弟の食べ物を奪い、友と成績を争い、大人になって同僚と特権を争い——どこに行っても不和を生み、老いた父母をも顧みません。人生は孤独と苦しみへ向かいます。</p>
+        <p>だから、人と生き物への愛を少しずつ育てましょう。友にケーキを分け、鳥に米をまく、お年玉の一部を貧しい人に。利他の精神について日々語れば、利己の傾向は磨られ、寛大な心が育ちます。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>食べ物を分け合う；鳥や動物に与える；お年玉の一部を困っている人に。</li>
+          <li>家族の食事のとき、無私の善行の実話を語る——子の魂を養います。</li>
+        </ul>
+        <p><strong>覚えておきたい話：</strong>何年も障害のある同級生を学校まで運んだ子；道を直したボランティア；木を植えて森にした人；路地を広げるために柵を内に引いた家族。</p>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>많은 아이는 태어날 때부터 자기 중심적이어서 자신의 이익만 생각합니다. 그대로 두면 형제의 음식을 빼앗고, 친구와 성적을 다투고, 어른이 되어 동료와 특권을 다투어 어디서나 불화를 일으키고 늙은 부모도 돌보지 않습니다. 인생은 고독과 고통으로 흘러갑니다.</p>
+        <p>그러므로 사람과 생물에 대한 사랑을 조금씩 기르세요. 친구에게 케이크를 나누고, 새에게 쌀을 뿌리고, 세뱃돈 일부를 가난한 이에게. 이타의 정신을 날마다 말하면 이기심은 닳고 너그러운 마음이 자랍니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>음식 나누기；새와 동물에게 먹이；세뱃돈 일부를 어려운 이에게.</li>
+          <li>가족 식사 때 이타적 선행의 실제 이야기를 들려 주기.</li>
+        </ul>
+        <p><strong>기억할 이야기：</strong>장애 친구를 여러 해 등교시킨 아이；길을 고친 봉사자；나무를 심어 숲을 만든 이；골목을 넓히려 울타리를 안으로 옮긴 가족.</p>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>许多孩子生来就自我中心，只想到自己的利益。若不加以转化，会与兄弟姐妹争食，与同学争分数，长大后与同事争特权——所到之处制造不和，甚至不孝父母。人生趋向孤独与痛苦。</p>
+        <p>因此要一点一滴培养对人、对众生的慈爱：与朋友分蛋糕，撒米喂鸟，用压岁钱帮助穷人。日复一日讲利他精神，自私倾向渐被磨去，宽厚之心渐长。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>分享食物；喂鸟兽；将压岁钱一部分给有需要的人。</li>
+          <li>家庭用餐时讲述无私善行的真实故事——滋养孩子的心灵。</li>
+        </ul>
+        <p><strong>宜记的故事：</strong>多年背残疾同学上学的孩子；修补破路的志愿者；种树成林的人；为拓宽小巷而把篱笆内移的家庭。</p>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 3 -->
+    <section id="p3">
+      <div class="principle-header">
+        <span class="principle-num">3</span>
+        <h3 class="principle-title en-only">Never Be Satisfied — Always Strive to Do Better</h3>
+        <h3 class="principle-title vi-only">Không tự mãn, luôn cố gắng hơn nữa</h3>
+        <!-- ANCHOR:p3-titles -->
+<!-- INJECTED:p3-titles -->
+<h3 class="principle-title ja-only">満足せず、常により良く努める</h3>
+        <h3 class="principle-title ko-only">만족하지 말고 더 나아지기</h3>
+        <h3 class="principle-title zh-only">不满足，常求更好</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children never to consider themselves finished, for with a little more effort one can always do better. When a child earns a high grade, finishes a chore, or does a good deed, praise them — that is simple fairness — but then gently ask whether they can think of a way to do it even better.</p>
+        <p>Do not press; simply pose the question and invite thought. Year after year, this quietly cures complacency, and the child learns to keep searching for a better way, in study and in life. This is the secret by which families nurture remarkable talent for their nation.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>After every success, ask warmly: “Can you think of a way to do it even better?”</li>
+          <li>Keep it an invitation, never a demand.</li>
+        </ul>
+        <p class="label">Try saying</p>
+        <blockquote><p>What good is arrogance and complacency? Beneath the sky there are always paths without end.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“Can you think of a way to clean the alley more thoroughly?”</p></div>
+          <div class="line"><p>“Can you think of a way to help old Mr. Ba get around more easily?”</p></div>
+          <div class="line"><p>“Can you think of a way to help the neighbourhood children study better?”</p></div>
+          <div class="line"><p>“Can you think of a way to speak English with a native accent?”</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy trẻ không bao giờ cho rằng mình đã giỏi, đã hoàn thành, vì chắc chắn nếu cố gắng thêm ta vẫn có thể làm hay hơn. Mỗi khi trẻ được điểm cao, hoàn tất việc nhà, hay làm được một việc thiện, ta phải khen — đó là sự công bằng — nhưng rồi gợi ý xem trẻ có thể nghĩ ra cách gì làm hay hơn chút nữa không.</p>
+        <p>Ta không ép, chỉ hỏi gợi ý cho trẻ suy nghĩ. Hết năm này đến năm khác cứ hỏi như thế, trẻ từ từ mất bệnh tự mãn, lúc nào cũng cố tìm một giải pháp hay hơn, cả trong học tập và trong việc làm. Đây là bí quyết để các dòng họ đào tạo ra nhân tài lỗi lạc cho đất nước.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Sau mỗi thành công, hỏi nhẹ nhàng: “Con nghĩ xem có cách nào làm hay hơn chút nữa không?”</li>
+          <li>Luôn là lời gợi ý, không phải lời ép buộc.</li>
+        </ul>
+        <p class="label">Lời nên tập nói</p>
+        <blockquote>
+          <p>Chủ quan tự mãn làm gì</p>
+          <p>Dưới trời luôn có đường đi vô cùng.</p>
+        </blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“Con nghĩ xem có cách nào nhặt rác ngoài hẻm cho sạch hơn không?”</p></div>
+          <div class="line"><p>“Con nghĩ xem có cách nào giúp ông Bảy đi lại dễ dàng hơn không?”</p></div>
+          <div class="line"><p>“Con nghĩ xem có cách nào giúp trẻ em xóm mình học giỏi hơn không?”</p></div>
+          <div class="line"><p>“Con nghĩ xem có cách nào tập nói tiếng Anh đúng giọng bản ngữ không?”</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:p3 -->
+<!-- INJECTED:p3 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに、自分はもう十分だと思わないよう教えましょう。少し努力すれば、いつでももっと良くできるのです。高い点を取ったとき、家事を終えたとき、善行をしたとき——褒めるのは当然の公平です——そのうえ、もっと良くする方法を考えられるか、やさしく尋ねます。</p>
+        <p>押しつけず、問いを投げ、考えを促します。年々これを続ければ、慢心は静かに治り、学びも人生も、より良い方法を探し続けるようになります。これが、家系が国のために秀れた人材を育てる秘訣です。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>成功のたびに温かく尋ねる：「もっと良くする方法を考えられる？」</li>
+          <li>常に招きであり、要求ではないこと。</li>
+        </ul>
+        <p class="label">言葉の例</p>
+        <blockquote><p>慢心と満足に何の益がある？天の下には、終わりのない道がある。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「路地をもっときれいに掃く方法を考えられる？」</p></div>
+          <div class="line"><p>「おじいさんがもっと楽に歩ける方法を考えられる？」</p></div>
+          <div class="line"><p>「近所の子たちがもっとよく勉強できる方法を考えられる？」</p></div>
+          <div class="line"><p>「英語をもっと上手に話す方法を考えられる？」</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 스스로 이미 충분하다고 생각하지 말도록 가르치세요. 조금 더 노력하면 언제나 더 잘할 수 있습니다. 좋은 점수, 집안일, 선행—칭찬은 당연한 공정—그다음 더 잘할 방법을 생각할 수 있느냐고 부드럽게 묻습니다.</p>
+        <p>억누르지 말고 질문을 던져 생각하게 하세요. 해가 갈수록 교만은 조용히 사라지고, 공부와 삶에서 더 나은 길을 찾게 됩니다. 이것이 가문이 나라를 위해 뛰어난 인재를 키우는 비결입니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>성공할 때마다 따뜻하게：「더 잘할 방법을 생각해 볼 수 있니?」</li>
+          <li>항상 초대이지 요구가 아님.</li>
+        </ul>
+        <p class="label">말해 보기</p>
+        <blockquote><p>교만과 만족에 무슨 이득이 있나? 하늘 아래 끝 없는 길이 있다.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「골목을 더 깨끗이 청소할 방법을 생각해 볼 수 있니?」</p></div>
+          <div class="line"><p>「할아버지가 더 편히 다닐 방법을 생각해 볼 수 있니?」</p></div>
+          <div class="line"><p>「동네 아이들이 더 잘 공부할 방법을 생각해 볼 수 있니?」</p></div>
+          <div class="line"><p>「영어를 더 잘 말할 방법을 생각해 볼 수 있니?」</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子切勿以为自己已经够好，因为再多一点努力，总能做得更好。考高分、做完家务、做了善事——称赞是公平——然后温和地问：能否想到做得更好的办法？</p>
+        <p>不施压，只提问、启发思考。年复一年，自满会悄然消退，孩子在学业与生活中不断寻找更佳之道。这是家族为国家培育杰出人才的秘诀。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>每次成功后温和地问：「你能想到做得更好一点的办法吗？」</li>
+          <li>始终是邀请，而非命令。</li>
+        </ul>
+        <p class="label">可练习的话</p>
+        <blockquote><p>傲慢自满有何益？天下之路无穷无尽。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「你能想到把巷子扫得更干净的办法吗？」</p></div>
+          <div class="line"><p>「你能想到让老爷爷走动更方便的办法吗？」</p></div>
+          <div class="line"><p>「你能想到帮街坊孩子学得更好的办法吗？」</p></div>
+          <div class="line"><p>「你能想到把英语说得更好的办法吗？」</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 4 -->
+    <section id="p4">
+      <div class="principle-header">
+        <span class="principle-num">4</span>
+        <h3 class="principle-title en-only">Practice Humility — Let Others Receive the Praise</h3>
+        <h3 class="principle-title vi-only">Khiêm cung kín đáo, không khoe khoang</h3>
+        <!-- ANCHOR:p4-titles -->
+<!-- INJECTED:p4-titles -->
+<h3 class="principle-title ja-only">謙虚に——誉れは人に譲る</h3>
+        <h3 class="principle-title ko-only">겸손히—칭찬은 남에게</h3>
+        <h3 class="principle-title zh-only">谦卑——让他人受赞美</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children to be modest and never to boast. The world does need good examples to be inspired — but let our own good deeds be spoken of by others, while we speak of the good deeds of others. Each good story we tell is a brick in the building of the world.</p>
+        <p>Do good quietly, without display. When praised, respond graciously; inwardly, resolve to strive still harder so as not to disappoint those around you. In this way good fortune is preserved for a long time.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Redirect praise toward others; stay humbly in the background.</li>
+          <li>Tell the good deeds of others freely; let your own be told by others.</li>
+        </ul>
+        <p class="label">Try saying</p>
+        <blockquote><p>Let the praise be passed to others; for myself I keep a humble smile.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">“I heard you won the maths award — is that right?”</p><p>“Oh, Auntie, I was just lucky; my classmates are much better than me.”</p></div>
+          <div class="line"><p class="prompt">“What a lovely child!”</p><p>“My siblings simply let me have the good looks.”</p></div>
+          <div class="line"><p class="prompt">“Your competition essay was outstanding.”</p><p>“Teacher, I only did as you taught me; my classmates let me go in their place.”</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy con khiêm cung kín đáo, không khoe khoang. Thế giới cần những tấm gương tốt để có động lực tiến lên, nhưng chuyện tốt của ta chỉ nên để người khác kể, còn ta thì kể chuyện tốt của người khác. Mỗi câu chuyện tốt là một viên gạch xây dựng thế giới.</p>
+        <p>Ta cố gắng làm nhiều việc tốt nhưng im lặng kín đáo, ai biết ai khen thì nói khéo, trong lòng nghĩ rằng mình vẫn còn phải cố gắng nhiều hơn nữa để không làm mọi người thất vọng. Như thế phước được giữ dài lâu.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Đẩy lời khen cho người khác; phần mình khiêm cung ở phía sau.</li>
+          <li>Kể chuyện tốt của người; chuyện tốt của mình để người khác kể.</li>
+        </ul>
+        <p class="label">Lời nên tập nói</p>
+        <blockquote>
+          <p>Lời khen xin đẩy cho người</p>
+          <p>Còn con xin giữ nụ cười khiêm cung.</p>
+        </blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="exchange">“Bác nghe cháu được giải học sinh giỏi toán phải không?” — “Dạ, cháu chỉ ăn may thôi ạ, các bạn giỏi hơn cháu nhiều.”</p></div>
+          <div class="line"><p class="exchange">“SAO mà cháu xinh thế!” — “Dạ, các anh chị nhường cho cháu đấy ạ.”</p></div>
+          <div class="line"><p class="exchange">“Bài văn dự thi của cháu xuất sắc.” — “Dạ, cháu chỉ làm theo cô dạy, các bạn nhường cháu đi thi đó ạ.”</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:p4 -->
+<!-- INJECTED:p4 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに謙虚で、自慢しないよう教えましょう。世には良い手本が必要です——しかし自分の善行は人に語ってもらい、自分は人の善行を語ります。一つ一つの良い話は、世界を築くれんがです。</p>
+        <p>善いことを静かに、見せびらかさず行います。褒められたら礼儀正しく応じ、心の中では周りを失望させまいと、さらに努力しようと誓います。そうして福は長く保たれます。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>誉れは人に回し、自分は謙虚に後に控える。</li>
+          <li>人の善行は自由に語り、自分の善行は人に語ってもらう。</li>
+        </ul>
+        <p class="label">言葉の例</p>
+        <blockquote><p>誉れは人に譲り、自分は謙虚な笑みを保つ。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「数学の賞を取ったそうですね？」</p><p>「いえ、運が良かっただけです。クラスメートの方がずっと上手です。」</p></div>
+          <div class="line"><p class="prompt">「なんて可愛い子！」</p><p>「兄姉が顔の良い方を私に譲ってくれたんです。」</p></div>
+          <div class="line"><p class="prompt">「作文が素晴らしいですね。」</p><p>「先生のお教えどおりです。友だちが私の代わりに出させてくれました。」</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 겸손하고 자랑하지 말도록 가르치세요. 세상에는 본이 필요하지만, 자신의 선행은 남이 말하게 하고, 자신은 남의 선행을 말합니다. 좋은 이야기 하나하나가 세상을 짓는 벽돌입니다.</p>
+        <p>선한 일을 조용히, 드러내지 않고 합니다. 칭찬받으면 예의 바르게 답하고, 마음속으로는 주변을 실망시키지 않으려 더 노력하기로 합니다. 그렇게 복이 오래 유지됩니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>칭찬은 남에게 돌리고, 자신은 뒤에서 겸손히.</li>
+          <li>남의 선행은 자유롭게 말하고, 자신의 선행은 남이 말하게.</li>
+        </ul>
+        <p class="label">말해 보기</p>
+        <blockquote><p>칭찬은 남에게 넘기고, 나는 겸손한 미소를 지킨다.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「수학 상 받았다며?」</p><p>「아니요, 운이 좋았을 뿐이에요. 친구들이 훨씬 잘해요.」</p></div>
+          <div class="line"><p class="prompt">「정말 예쁜 아이구나!」</p><p>「형제자매가 잘생긴 쪽을 저에게 양보해 줬어요.」</p></div>
+          <div class="line"><p class="prompt">「글짓기가 훌륭하네.」</p><p>「선생님 가르침대로일 뿐이고, 친구들이 제 대신 나가게 해 줬어요.」</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子谦卑，不夸耀。世界需要善榜样——但自己的善行由他人传颂，自己则传颂他人的善行。每一个善的故事都是砌世界的砖。</p>
+        <p>行善要安静、不张扬。受赞美时礼貌回应，心中立志更加努力，不负众人。福泽得以长久保持。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>把赞美让给别人；自己谦退在后。</li>
+          <li>自由传颂他人的善行；自己的善行由他人传颂。</li>
+        </ul>
+        <p class="label">可练习的话</p>
+        <blockquote><p>赞美请推给他人；我只守谦卑的微笑。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「听说你拿了数学奖？」</p><p>「阿姨，我只是运气好，同学比我厉害多了。」</p></div>
+          <div class="line"><p class="prompt">「这孩子真可爱！」</p><p>「是哥哥姐姐把好看让给了我。」</p></div>
+          <div class="line"><p class="prompt">「参赛作文真出色。」</p><p>「老师，我只是照您教的做，同学让给我去的。」</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 5 -->
+    <section id="p5">
+      <div class="principle-header">
+        <span class="principle-num">5</span>
+        <h3 class="principle-title en-only">Never Mock or Criticize with Contempt</h3>
+        <h3 class="principle-title vi-only">Không chê bai, khinh miệt</h3>
+        <!-- ANCHOR:p5-titles -->
+<!-- INJECTED:p5-titles -->
+<h3 class="principle-title ja-only">嘲笑や軽蔑の批判をしない</h3>
+        <h3 class="principle-title ko-only">조롱·멸시하지 않기</h3>
+        <h3 class="principle-title zh-only">不嘲弄、不轻蔑批评</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children never to mock others. To deride with contempt instantly draws negative karma upon oneself — one later finds oneself afflicted with the very flaw one ridiculed. When we see a fault in someone, our heart should silently wish them free of it; and if the moment is right, we may offer gentle, compassionate guidance to help them overcome it.</p>
+        <p>Quiet, caring counsel that lifts a person past a shortcoming is a great merit — entirely different from spreading ridicule, tarnishing a reputation, and wounding someone. Teach children to stop criticism before it harms, and to turn critical remarks in a positive direction.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>When others gossip or mock, gently steer the talk elsewhere; never join in.</li>
+          <li>Look for a kind reading of every fault, and a way to help.</li>
+        </ul>
+        <p class="label">Try saying</p>
+        <blockquote><p>Harsh words tear the bonds of love; kind counsel mends a gentle life.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">“That child is so chubby”</p><p>“A little more muscle means more stored energy; that’s good.”</p></div>
+          <div class="line"><p class="prompt">“That student is hopeless at studying”</p><p>“Perhaps no one is free to tutor them at home; let’s see if we can help.”</p></div>
+          <div class="line"><p class="prompt">“Great voice, unfortunate face”</p><p>“A great voice is what matters; looks serve a different purpose.”</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy con không được chê bai ai cả. Chê bai với ý khinh miệt là lập tức chuốc nghiệp xấu vào cho mình, sau này mình sẽ bị đúng khuyết điểm đó. Thấy ai có khuyết điểm gì, lòng ta thầm mong cho người hết khuyết điểm đó; nếu đủ duyên thì dùng lòng từ bi khuyên bảo giúp người vượt qua.</p>
+        <p>Sự khuyên bảo ân cần kín đáo giúp người vượt qua khuyết điểm là một công đức lớn, khác với sự chê bai lan truyền bôi xấu hạ uy tín làm tổn thương người. Nghe người này chê người kia, ta dạy trẻ tìm cách ngăn lại, không hùa theo tạo nghiệp.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Khi nghe chê bai, nhẹ nhàng hướng câu chuyện sang chỗ khác; không hùa theo.</li>
+          <li>Tìm cách hiểu tốt cho mỗi khuyết điểm, và tìm cách giúp.</li>
+        </ul>
+        <p class="label">Lời nên tập nói</p>
+        <blockquote>
+          <p>Lời chê tàn phá tình người</p>
+          <p>Lời khuyên hàn gắn cuộc đời ấm êm.</p>
+        </blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="exchange">“Con nhỏ đó ăn gì mà béo thế” — “Có nhiều cơ hơn tức là có nhiều năng lượng dự trữ, tốt mà.”</p></div>
+          <div class="line"><p class="exchange">“Thằng đó học dở” — “Chắc nhà bạn ít người kèm; ta xem phụ đạo giùm.”</p></div>
+          <div class="line"><p class="exchange">“Ca sĩ này hát hay mà mặt xấu” — “Hát hay là được rồi, xấu đẹp để dùng vào việc khác.”</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:p5 -->
+<!-- INJECTED:p5 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに、誰も嘲笑してはならないと教えましょう。軽蔑の念で嘲ると、すぐに悪い業を招き、後に自分が嘲った欠点に苦しめられます。人の欠点を見たら、心の中でその人がそれを離れることを願い；縁があれば、やさしく慈悲深い助言をします。</p>
+        <p>静かで思いやりのある助言は大きな功徳です。嘲笑を広め、評判を傷つけ、人を傷つけることとは全く違います。批判が害になる前に止め、言葉を善い方向へ向けるよう教えましょう。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>人が悪口や嘲笑をするとき、やさしく話題をそらす；決して同調しない。</li>
+          <li>あらゆる欠点を善く解釈し、助ける道を探す。</li>
+        </ul>
+        <p class="label">言葉の例</p>
+        <blockquote><p>厳しい言葉は愛の絆を裂く；やさしい諫めは穏やかな人生を修す。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「あの子、太っているね」</p><p>「筋肉が多いほどエネルギーが蓄えられる。それは良いことだよ。」</p></div>
+          <div class="line"><p class="prompt">「あの子、勉強ができない」</p><p>「家で教えてくれる人がいないのかも。手伝えるか見てみよう。」</p></div>
+          <div class="line"><p class="prompt">「歌は上手、顔は残念」</p><p>「歌が上手なら十分。見た目は別の役割がある。」</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 누구도 조롱하지 말도록 가르치세요. 멸시의 마음으로 비웃으면 곧 악업을 짓고, 나중에 비웃었던 그 결점으로 고통받습니다. 남의 결점을 보면 마음속으로 그것에서 벗어나기를 바라고, 인연이 되면 부드럽고 자비로운 권면을 합니다.</p>
+        <p>조용하고 배려 있는 권면은 큰 공덕이며, 조롱을 퍼뜨려 평판을 해치고 상처 주는 것과는 전혀 다릅니다. 비판이 해가 되기 전에 멈추고, 말을 선한 방향으로 돌리도록 가르치세요.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>험담·조롱을 들을 때 부드럽게 화제를 돌리기；결코 동조하지 않기.</li>
+          <li>모든 결점을 선하게 이해하고 돕는 길 찾기.</li>
+        </ul>
+        <p class="label">말해 보기</p>
+        <blockquote><p>거친 말은 사랑의 매를 찢고, 온 권면은 부드러운 삶을 이어 준다.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「저 애 왜 이렇게 뚠뚠해?」</p><p>「근육이 많을수록 에너지가 쌓이는 거야. 좋은 일이지.」</p></div>
+          <div class="line"><p class="prompt">「저 애 공부 못해」</p><p>「집에서 가르쳐 줄 사람이 없을 수도 있어. 우리가 도울 수 있는지 보자.」</p></div>
+          <div class="line"><p class="prompt">「노래는 잘하는데 얼굴이…」</p><p>「노래 잘하면 됐지. 생김새는 다른 데 쓰이는 거야.」</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子切勿嘲弄任何人。带着轻蔑去讥笑，立刻招来恶业，日后往往自受其嘲过的那一缺陷。见人有缺点，心中默愿其脱离；若有因缘，则以慈悲温和劝勉，助其超越。</p>
+        <p>安静、关怀的劝勉是大功德，与传播嘲笑、玷污名誉、伤人完全不同。教孩子在批评造成伤害前止住，把话语转向善的方向。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>听见非议或嘲弄时，温和转移话题；绝不附和。</li>
+          <li>为每个缺点寻找善意的理解，并设法帮助。</li>
+        </ul>
+        <p class="label">可练习的话</p>
+        <blockquote><p>苛言撕裂人情；温谏缝补安然人生。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p class="prompt">「那孩子怎么这么胖」</p><p>「肌肉多就是储备能量多，这是好事。」</p></div>
+          <div class="line"><p class="prompt">「他读书不行」</p><p>「也许家里没人辅导；看看我们能不能帮。」</p></div>
+          <div class="line"><p class="prompt">「唱得好，脸却不好看」</p><p>「唱得好就够了，美丑另有用途。」</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 6 -->
+    <section id="p6">
+      <div class="principle-header">
+        <span class="principle-num">6</span>
+        <h3 class="principle-title en-only">Be Discerning about Peer Influence</h3>
+        <h3 class="principle-title vi-only">Biết chọn bạn mà chơi</h3>
+        <!-- ANCHOR:p6-titles -->
+<!-- INJECTED:p6-titles -->
+<h3 class="principle-title ja-only">友人の影響を見極める</h3>
+        <h3 class="principle-title ko-only">친구의 영향을 분별하기</h3>
+        <h3 class="principle-title zh-only">明辨同伴的影响</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children not to follow friends readily wherever they lead, for most wayward children are led astray by their peers. Among friends, formality falls away, so influence passes easily — and the boldest, most disruptive children often sway the rest. A child who refuses to follow may even risk being bullied.</p>
+        <p>So teach children to weigh a friend’s character and choose good company. Know your child’s world down to each friend; never be lax or indifferent. Pose many situations in advance and ask your child how they would answer, so they are ready when the moment comes.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Help your child judge friends by character, and choose accordingly.</li>
+          <li>Stay close to your child’s world; know each of their friends.</li>
+          <li>Rehearse difficult scenarios together, again and again.</li>
+        </ul>
+        <p class="label">Try saying</p>
+        <blockquote><p>Friends may bring you joy — but do not let a friend bury your life.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“If a friend asks you to skip class to play — what would you say to win them over?”</p></div>
+          <div class="line"><p>“If a friend speaks disrespectfully of a teacher — how would you reply?”</p></div>
+          <div class="line"><p>“If a friend urges you to live only for yourself and disobey your parents — how would you answer?”</p></div>
+          <div class="line"><p>“If a friend does wrong and tells you to keep it secret — how would you handle it?”</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy trẻ đừng dễ dàng nghe lời bạn bè rủ rê, vì hầu hết trẻ hư đều do bạn bè đầu độc. Bạn bè gần gũi, không cần lễ nghĩa khách sáo, nên rất dễ ảnh hưởng nhau; những đứa cá tính mạnh, quậy phá lại dễ lôi kéo bạn. Nếu không đi theo có khi còn bị ức hiếp.</p>
+        <p>Vì thế phải dạy trẻ biết đánh giá đạo đức của bạn để chọn bạn mà chơi. Cha mẹ cũng phải hiểu con mình cho tới từng đứa bạn, đừng buông lỏng bỏ mặc. Cứ đặt ra nhiều tình huống để hỏi con trả lời, chuẩn bị tinh thần đối phó với bạn xấu.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Dạy con đánh giá bạn qua đạo đức, từ đó biết chọn bạn tốt.</li>
+          <li>Hiểu thế giới của con tới từng người bạn; không buông lỏng.</li>
+          <li>Cùng con tập trước nhiều tình huống khó, lặp lại nhiều lần.</li>
+        </ul>
+        <p class="label">Lời nên tập nói</p>
+        <blockquote>
+          <p>Bạn bè có thể là vui</p>
+          <p>Nhưng đừng để bạn chôn vùi đời ta.</p>
+        </blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“Nếu bạn rủ trốn học đi chơi — con nói sao để bạn nghe lời con?”</p></div>
+          <div class="line"><p>“Nếu bạn nói lời bất kính với thầy cô — con đáp thế nào?”</p></div>
+          <div class="line"><p>“Nếu bạn kêu gọi sống cho mình, đừng vâng lời bố mẹ — con trả lời sao?”</p></div>
+          <div class="line"><p>“Nếu bạn làm sai rồi dặn con đừng nói ai biết — con xử lý sao?”</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:p6 -->
+<!-- INJECTED:p6 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに、友が誘うままに従ってはならないと教えましょう。多くの迷い道の子は友に引きずられます。友だちの間では礼儀が薄れ、影響は伝わりやすく——特に大胆で乱暴な子が他を動かします。従わない子はいじめられることもあります。</p>
+        <p>だから友の品格を見極め、良い仲間を選ぶよう教えましょう。子の世界を、友一人一人まで知り、油断しないでください。あらかじめ多くの場面を想定し、どう答えるか問い、時が来たとき備えさせます。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>友の品格で見極め、選ぶ手伝いをする。</li>
+          <li>子の世界に近づき、友だち一人一人を知る。</li>
+          <li>難しい場面を一緒に何度もリハーサルする。</li>
+        </ul>
+        <p class="label">言葉の例</p>
+        <blockquote><p>友は喜びをもたらす——しかし友に人生を埋めさせてはならない。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「友がサボって遊ぼうと言ったら——どう言えば味方についてもらえる？」</p></div>
+          <div class="line"><p>「友が先生をなめた口ききをしたら——どう答える？」</p></div>
+          <div class="line"><p>「友が自分だけのために親に背けと言ったら——どう答える？」</p></div>
+          <div class="line"><p>「友が悪いことをして秘密にしろと言ったら——どうする？」</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 친구가 이끄는 대로 쉽게 따르지 말라고 가르치세요. 길을 잃은 아이 대부분은 친구에게 이끌립니다. 친구 사이에는 예의가 희미해져 영향이 쉽게 전해지고, 대담하고 말썽꾸러기인 아이가 다른 이를 끌고 갑니다. 따르지 않으면 괴롭힘당할 수도 있습니다.</p>
+        <p>그러므로 친구의 인품을 보고 좋은 벗을 고르게 하세요. 자녀의 세계를 친구 한 사람 한 사람까지 알고 방치하지 마세요. 여러 상황을 미리 제시하고 어떻게 답할지 물어, 때가 오면 대비하게 하세요.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>친구 인품으로 분별하고 고르게 돕기.</li>
+          <li>자녀의 세계에 가까이하며 친구 각각 알기.</li>
+          <li>어려운 상황을 함께 반복 연습.</li>
+        </ul>
+        <p class="label">말해 보기</p>
+        <blockquote><p>친구는 기쁨을 줄 수 있으나, 친구에게 인생을 묻히게 하지 말라.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「친구가 수업 빠지고 놀자고 하면—어떻게 말해 설득할 수 있니?」</p></div>
+          <div class="line"><p>「친구가 스승을 무례하게 말하면—어떻게 답하니?」</p></div>
+          <div class="line"><p>「친구가 자기만 위해 부모 말을 따르지 말라고 하면—어떻게 답하니?」</p></div>
+          <div class="line"><p>「친구가 잘못하고 아무에게도 말하지 말라고 하면—어떻게 하니?」</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子不要轻易随朋友所引而行，因多数误入歧途的孩子是被同伴牵走。朋友之间礼节淡薄，影响易传，尤其胆大妄为者常带动他人。不肯跟随者甚至可能被欺凌。</p>
+        <p>因此要教孩子衡量朋友的品格，择善而交。父母要了解孩子的世界，直到每一位朋友，不可疏忽。事先设想多种情境，问孩子如何回应，以备不时。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>帮孩子按品格判断，从而择友。</li>
+          <li>贴近孩子的世界，认识每一位朋友。</li>
+          <li>与孩子反复预演困难情境。</li>
+        </ul>
+        <p class="label">可练习的话</p>
+        <blockquote><p>朋友可带来欢喜——但勿让朋友埋葬你的人生。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「若朋友约你逃课去玩——你怎么说，才能让他听你的？」</p></div>
+          <div class="line"><p>「若朋友对老师出言不敬——你怎么答？」</p></div>
+          <div class="line"><p>「若朋友要你只为自己活、不听父母——你怎么答？」</p></div>
+          <div class="line"><p>「若朋友做错事叫你保密——你怎么处理？」</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 7 -->
+    <section id="p7">
+      <div class="principle-header">
+        <span class="principle-num">7</span>
+        <h3 class="principle-title en-only">Acknowledge Faults and Accept Correction</h3>
+        <h3 class="principle-title vi-only">Biết nhận lỗi, biết phục thiện</h3>
+        <!-- ANCHOR:p7-titles -->
+<!-- INJECTED:p7-titles -->
+<h3 class="principle-title ja-only">過ちを認め、諫めを受け入れる</h3>
+        <h3 class="principle-title ko-only">잘못 인정하고 권면 받기</h3>
+        <h3 class="principle-title zh-only">认错并接受规劝</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children to admit mistakes, to apologize, and to sincerely reform — never to be obstinate or argumentative in defense of their errors. Everyone makes mistakes; the world improves, and each person improves, because we learn to admit our faults rather than stubbornly defend what is wrong.</p>
+        <p>Those who err and quickly acknowledge it, so as not to repeat it, spare themselves much future suffering. A child who learns this early will rarely make the same mistake again.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Welcome a child’s apology warmly so honesty feels safe.</li>
+          <li>Model admitting your own mistakes plainly and without drama.</li>
+        </ul>
+        <p class="label">Try saying</p>
+        <blockquote><p>When wrong, admit it straight away; and grow into a gentle soul for the land.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“Father, this morning I argued with my brother about watering the plants. I’m sorry, and I’ll go and apologize to him.”</p></div>
+          <div class="line"><p>“Mother, last night I was sulky and disrespectful when my sister told me to study. I know that was wrong; I’ll apologize and obey.”</p></div>
+          <div class="line"><p>“Teacher, yesterday I knew my classmate was wrongly accused but lacked the courage to defend him. I’m sorry; I won’t stand by again.”</p></div>
+        </div>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy con biết nhận lỗi, biết xin lỗi, biết phục thiện, chứ không ngoan cố bướng bỉnh tự ái cự cãi. Sống trên đời ai cũng có sai lầm; thế giới tốt đẹp lên và mỗi người tốt đẹp lên vì con người biết nhận lỗi chứ không ngoan cố bảo vệ cái sai.</p>
+        <p>Ai vừa phạm lỗi đã biết nhận lỗi để không tái phạm thì tránh được nhiều khổ đau về sau. Trẻ học được điều này sớm thì lớn lên ít khi còn phạm lỗi nữa.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Đón lời xin lỗi của con bằng sự ấm áp để sự trung thực được an toàn.</li>
+          <li>Cha mẹ làm gương: nhận lỗi của mình một cách giản dị.</li>
+        </ul>
+        <p class="label">Lời nên tập nói</p>
+        <blockquote>
+          <p>Khi sai biết nhận lỗi liền</p>
+          <p>Lớn lên làm một người hiền cho non sông.</p>
+        </blockquote>
+        <div class="dialogue">
+          <div class="line"><p>“Thưa ba, sáng nay con cãi lời anh Hai khi anh bảo con tưới cây. Con xin lỗi ba, và con sẽ đến xin lỗi anh.”</p></div>
+          <div class="line"><p>“Thưa mẹ, tối qua chị Tư bảo con ngưng xem điện thoại để học, con vùng vằng vô lễ. Con biết sai, con sẽ xin lỗi và vâng lời chị.”</p></div>
+          <div class="line"><p>“Thưa thầy, hôm qua con biết bạn Hải bị oan mà không đủ can đảm bảo vệ. Con xin lỗi và hứa sẽ không bỏ mặc bạn bị oan nữa.”</p></div>
+        </div>
+      </div>
+      <!-- ANCHOR:p7 -->
+<!-- INJECTED:p7 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに、過ちを認め、謝罪し、誠心改めるよう教えましょう——誤りを頑なに弁護してはなりません。誰も過ちを犯します。世が良くなり、人が良くなるのは、誤りを頑固に守るのではなく認めるからです。</p>
+        <p>過ちを犯してすぐ認め、繰り返さぬ者は、後の多くの苦しみを避けます。幼いうちに学べば、同じ過ちを繰り返すことは稀になります。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>子の謝罪を温かく迎え、正直さが安全だと感じさせる。</li>
+          <li>自分の過ちを、大げさにせず素直に認める手本を示す。</li>
+        </ul>
+        <p class="label">言葉の例</p>
+        <blockquote><p>誤ったときはすぐ認め、やがてこの国の穏やかな人となる。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「お父さん、今朝兄と植物の水やりで言い争いました。すみません。兄に謝りに行きます。」</p></div>
+          <div class="line"><p>「お母さん、昨夜姉に勉強しろと言われて不機嫌になりました。わかりました。謝って従います。」</p></div>
+          <div class="line"><p>「先生、昨日友が不当に責められているのに守る勇気がありませんでした。すみません。もう見過ごしません。」</p></div>
+        </div>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 잘못을 인정하고 사과하며 진심으로 고치도록 가르치세요—잘못을 고집하며 다투지 말 것. 누구나 실수합니다. 세상과 사람이 나아지는 것은 틀림을 고집하지 않고 인정하기 때문입니다.</p>
+        <p>잘못하고 곧 인정하여 반복하지 않으면 후의 많은 고통을 피합니다. 어릴 때 배우면 같은 잘못을 거의 반복하지 않습니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>자녀의 사과를 따뜻히 맞아 정직함이 안전함을 느끼게.</li>
+          <li>자신의 잘못을 과장 없이 담담히 인정하는 본 보이기.</li>
+        </ul>
+        <p class="label">말해 보기</p>
+        <blockquote><p>틀리면 곧 인정하고, 자라서 이 땅의 온유한 사람이 되라.</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「아버지, 오늘 아침 형과 물 주기로 다퉜어요. 죄송해요. 형에게 사과하러 갈게요.」</p></div>
+          <div class="line"><p>「어머니, 어젯밤 누나가 공부하라 해서 투정했어요. 잘못이에요. 사과하고 따를게요.」</p></div>
+          <div class="line"><p>「선생님, 어제 친구가 억울하게 혼났는데 지켜 줄 용기가 없었어요. 죄송합니다. 다시는 외면하지 않겠습니다.」</p></div>
+        </div>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子认错、道歉、真心改过——切勿固执争辩护短。人人都会犯错；世界与人之所以变好，是因为人肯认错，而非顽固守护错误。</p>
+        <p>犯错后立刻承认、不再重犯，可免日后许多痛苦。幼时学会，长大便少犯同样的错。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>温暖接纳孩子的道歉，让诚实感到安全。</li>
+          <li>父母作榜样：平淡承认自己之错。</li>
+        </ul>
+        <p class="label">可练习的话</p>
+        <blockquote><p>有错当即认错，长成国土的温和之人。</p></blockquote>
+        <div class="dialogue">
+          <div class="line"><p>「爸爸，今早我和哥哥为浇水争吵了。对不起，我去向哥哥道歉。」</p></div>
+          <div class="line"><p>「妈妈，昨晚姐姐叫我别玩手机去学习，我发脾气无礼了。我错了，会去道歉并听话。」</p></div>
+          <div class="line"><p>「老师，昨天我知道同学被冤枉，却没勇气为他辩护。对不起，我不会再坐视。」</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 8 -->
+    <section id="p8">
+      <div class="principle-header">
+        <span class="principle-num">8</span>
+        <h3 class="principle-title en-only">Cultivate Equanimity in the Face of Adversity</h3>
+        <h3 class="principle-title vi-only">Bình thản trước nghịch cảnh</h3>
+        <!-- ANCHOR:p8-titles -->
+<!-- INJECTED:p8-titles -->
+<h3 class="principle-title ja-only">逆境にあっても心を安定させる</h3>
+        <h3 class="principle-title ko-only">역경 앞에서 마음을 고요히</h3>
+        <h3 class="principle-title zh-only">逆境中保持安然</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Tell your child that life is full of things that run contrary to our wishes, and that they will meet many difficult, even malicious people. Let the heart harbour no hatred for anyone — yet stay careful not to trust too easily, especially those who speak with honeyed words.</p>
+        <p>Develop the inner strength not to grow angry or resentful when insulted. People offend one another easily; if we let every slight trouble us, no clarity is left for anything worthwhile. We guard our dignity calmly — those who hurl offensive words are usually in the wrong, so we need not be disturbed; and those who truly wish to help us improve will find a kind and discerning way to speak.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Keep self-respect without resentment; stay calm when insulted.</li>
+          <li>Be wary of flattery; weigh honeyed words carefully.</li>
+        </ul>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải nói với con rằng sống giữa cuộc đời này rất nhiều chuyện phức tạp bất như ý, phải gặp nhiều kẻ khó chịu thậm chí ác độc. Lòng ta nguyện không ghét ai, nhưng luôn cẩn thận không dễ tin ai, nhất là những người giỏi nói lời ngon ngọt.</p>
+        <p>Phải có bản lĩnh không giận hờn tự ái khi bị xúc phạm. Người ta dễ buông lời xúc phạm nhau lắm; nếu cứ bận tâm phiền não thì không còn thời gian tâm trí lo việc có ích. Ta giữ phẩm giá mình nhưng bình thản nếu có ai xúc phạm — người nói lời xúc phạm thường là sai nên ta không cần bận tâm.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Giữ lòng tự trọng mà không oán hận; bình thản khi bị xúc phạm.</li>
+          <li>Cẩn thận với lời ngon ngọt; cân nhắc trước khi tin.</li>
+        </ul>
+      </div>
+      <!-- ANCHOR:p8 -->
+<!-- INJECTED:p8 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>人生には望みに反することが多く、難しく、ときに意地悪な人にも出会うと子に伝えましょう。誰も恨まない心を持ち——しかし、とくに甘い言葉をかける人には、安易に信じすぎないよう注意させます。</p>
+        <p>侮辱されても怒りや恨みを抱かない内なる力を育てましょう。人は軽く傷つけ合います。一つ一つ気にすれば、有益なことに回す心の余白は残りません。尊厳は穏やかに守り——暴言を吐く人はたいてい誤っており、動揺する必要はありません。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>恨みなく自尊心を保ち、侮辱されても穏やかに。</li>
+          <li>お世辞に警戒し、甘い言葉をよく見極める。</li>
+        </ul>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>인생에는 뜻과 다르고 어렵고, 때로 악의적인 사람도 만난다고 말하세요. 누구도 미워하지 않는 마음을 품되—특히 달콤한 말을 하는 이에게는 쉽게 믿지 말도록 하세요.</p>
+        <p>모욕당해도 분노·원망하지 않는 내면의 힘을 기르세요. 사람은 쉽게 상처를 줍니다. 사사건건 신경 쓰면 유익한 일에 쓸 여유가 없습니다. 존엄은 고요히 지키고—모욕하는 말을 하는 이는 대개 그릇되니 동요할 필요 없습니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>원망 없이 자존을 지키고, 모욕 앞에서 평정.</li>
+          <li>아첨에 경계하고, 달콤한 말을 신중히 판단.</li>
+        </ul>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>告诉孩子人生多不如意，会遇见许多难处甚至恶意之人。愿心不对任何人怀恨——但对花言巧语者，切勿轻易相信。</p>
+        <p>培养受辱不怒不怨的内在力量。人易出言伤人；若每件小事都耿耿于怀，便无余力做有益之事。安然守持尊严——出恶语者往往理亏，不必动心。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>无恨而守自尊；受辱时仍安然。</li>
+          <li>警惕奉承；细察甜言蜜语。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 9 -->
+    <section id="p9">
+      <div class="principle-header">
+        <span class="principle-num">9</span>
+        <h3 class="principle-title en-only">Teach Children to Meditate</h3>
+        <h3 class="principle-title vi-only">Tập ngồi thiền</h3>
+        <!-- ANCHOR:p9-titles -->
+<!-- INJECTED:p9-titles -->
+<h3 class="principle-title ja-only">子どもに瞑想を教える</h3>
+        <h3 class="principle-title ko-only">자녀에게 명상 가르치기</h3>
+        <h3 class="principle-title zh-only">教孩子静坐禅修</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Children should learn to sit in meditation from a very early age, so that the brain develops in a stable and lasting way. And not only children — adults too should practice, to still the mind, to strengthen moral character, and to rise to a higher plane of being.</p>
+        <p>With a meditative mind, one can endure many adversities, hold to one’s moral quality, and live a life filled with wisdom.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Begin with short, calm sitting; let it grow naturally with age.</li>
+          <li>Practice alongside your child, so stillness is something you share.</li>
+        </ul>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Trẻ phải biết ngồi thiền từ rất sớm để bộ não phát triển ổn định lâu dài. Chẳng riêng gì trẻ, người lớn cũng phải tập thiền để bình ổn tâm trí, củng cố đạo đức, và nâng mình lên đẳng cấp cao hơn trong vũ trụ.</p>
+        <p>Có được tâm thiền định, ta đủ sức chịu đựng nhiều nghịch cảnh, vẫn giữ được phẩm chất đạo đức, và sống một đời đầy minh triết.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Bắt đầu bằng những buổi ngồi ngắn, an tĩnh; lớn dần theo tuổi.</li>
+          <li>Cùng con ngồi thiền, để sự tĩnh lặng là điều hai mẹ con chia sẻ.</li>
+        </ul>
+      </div>
+      <!-- ANCHOR:p9 -->
+<!-- INJECTED:p9 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもは幼いうちから坐禅を学び、脳が安定的に育つようにしましょう。子だけでなく、大人も心を静め、徳を固め、存在のより高い次元へと昇るために修行すべきです。</p>
+        <p>瞑想の心があれば、多くの逆境に耐え、徳を保ち、智慧に満ちた人生を生きられます。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>短く静かな坐りから始め、年齢とともに自然に伸ばす。</li>
+          <li>子と一緒に坐る——静けさを分かち合う。</li>
+        </ul>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀는 어릴 때부터 앉아 명상하여 뇌가 안정적으로 자라게 하세요. 아이만이 아니라 어른도 마음을 고요히 하고 덕을 굳히며 더 높은 차원으로 올라가야 합니다.</p>
+        <p>명상의 마음이 있으면 많은 역경을 견디고 덕을 지키며 지혜로운 삶을 삽니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>짧고 고요한 앉기로 시작해 나이에 맞게 늘리기.</li>
+          <li>자녀와 함께 앉아 고요함을 나누기.</li>
+        </ul>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>孩子应自幼学习静坐，使大脑稳定长久地发展。不仅孩子，成人亦应修行，以安定心念、巩固德行、提升于宇宙中的境界。</p>
+        <p>有了禅定之心，便能承受诸多逆境，守持品德，度过充满智慧的一生。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>从简短安静的静坐开始，随年龄自然延长。</li>
+          <li>与孩子一同静坐，共享宁静。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRINCIPLE 10 -->
+    <section id="p10">
+      <div class="principle-header">
+        <span class="principle-num">10</span>
+        <h3 class="principle-title en-only">Nurture Great Aspirations and a Sense of Service</h3>
+        <h3 class="principle-title vi-only">Ước mơ lớn và lòng phụng sự</h3>
+        <!-- ANCHOR:p10-titles -->
+<!-- INJECTED:p10-titles -->
+<h3 class="principle-title ja-only">大いなる志と奉仕の心を育てる</h3>
+        <h3 class="principle-title ko-only">큰 뜻과 봉사의 마음 기르기</h3>
+        <h3 class="principle-title zh-only">培育大志与服务之心</h3>
+      </div>
+      <div class="en-only">
+        <p class="label">The teaching</p>
+        <p>Teach children to hold great dreams and a great sense of responsibility toward their country and the world. No one exists in isolation; anything that fails to interact with its surroundings destroys itself. The air we breathe, the water we drink, the food we eat — all are the wondrous coordination of the whole cosmos. We may be too small to do anything vast, but our souls must never be small: they must love all of heaven and earth, down to each petal and blade of grass.</p>
+        <p>Let a child’s heart nurture the dream of serving and contributing — not merely of earning much money for themselves. Let service come first, and reward will follow. Any honest work that serves others is good: sweeping streets, engineering, waiting tables, leading a nation — all noble, if done in a spirit of service.</p>
+        <p class="label">In practice</p>
+        <ul class="practice-list">
+          <li>Praise the wish to serve above the wish to earn.</li>
+          <li>Connect everyday gratitude — for air, water, food — to a love for all of life.</li>
+          <li>Honour every honest kind of work as worthy when done to serve.</li>
+        </ul>
+        <blockquote><p>How much our parents have poured forth — we ask only to offer boundless service to this life.</p></blockquote>
+      </div>
+      <div class="vi-only" lang="vi">
+        <p class="label">Lời dạy</p>
+        <p>Cha mẹ phải dạy trẻ có ước mơ lớn, có trách nhiệm lớn đối với đất nước và thế giới. Không ai xuất hiện giữa đời rồi tồn tại một mình được. Không khí ta thở, nước ta uống, thực phẩm ta ăn đều là sự phối hợp mầu nhiệm của toàn vũ trụ. Ta nhỏ bé không làm được chuyện lớn lao, nhưng tâm hồn nhất định không được nhỏ bé — phải yêu cả trời đất, yêu cả từng cánh hoa cọng lá.</p>
+        <p>Trong lòng trẻ phải nuôi ước mơ phụng sự cống hiến cho đất nước, chứ không phải chỉ kiếm nhiều tiền cho bản thân. Phụng sự trước đã, rồi trời đất sẽ ban thưởng sau. Làm gì cũng được, miễn hợp pháp và phụng sự cho đời: quét đường cũng được, kỹ sư cũng được, bưng bê cũng được, lãnh đạo cũng được — miễn là vì phụng sự.</p>
+        <p class="label">Thực hành</p>
+        <ul class="practice-list">
+          <li>Khen ước muốn phụng sự hơn là ước muốn kiếm tiền.</li>
+          <li>Nối lòng biết ơn mỗi ngày — với không khí, nước, thức ăn — với tình yêu sự sống.</li>
+          <li>Trân trọng mọi việc làm lương thiện khi được làm để phụng sự.</li>
+        </ul>
+        <blockquote>
+          <p>Biết bao công sức mẹ cha</p>
+          <p>Chỉ xin phụng sự bao la cuộc đời.</p>
+        </blockquote>
+      </div>
+      <!-- ANCHOR:p10 -->
+<!-- INJECTED:p10 -->
+<div class="ja-only" lang="ja">
+        <p class="label">教え</p>
+        <p>子どもに大いなる夢と、国と世界への大いなる責任感を持たせましょう。誰も孤立して存在できません。周囲と関わらないものは自ら滅びます。吸う空気、飲む水、食べる食物——すべては宇宙全体の妙なる調和です。私たちは大きなことをなせない小さな存在かもしれませんが、魂は小さくあってはなりません。天と地、一輪の花、一本の草まで愛しましょう。</p>
+        <p>子の心に、奉仕と貢献の夢を育てましょう——自分のためだけに多くの金を稼ぐ夢だけではありません。奉仕が先、報いは後から続きます。掃除、工学、給仕、国の指導——奉仕の心でなせば、すべて尊い働きです。</p>
+        <p class="label">実践</p>
+        <ul class="practice-list">
+          <li>稼ぐ願いより、奉仕の願いを褒める。</li>
+          <li>空気、水、食物への日々の感謝を、すべての命への愛につなげる。</li>
+          <li>奉仕のために行われる正直なあらゆる仕事を尊ぶ。</li>
+        </ul>
+        <blockquote><p>父母の恩は深く——このいのちに限りなく奉仕したい。</p></blockquote>
+      </div>
+      <div class="ko-only" lang="ko">
+        <p class="label">가르침</p>
+        <p>자녀에게 큰 꿈과 나라·세상에 대한 큰 책임을 품게 하세요. 누구도 홀로 존재할 수 없습니다. 주변과 상호작용하지 않으면 스스로 무너집니다. 마시는 공기, 물, 먹는 음식—모두 온 우주의 신묘한 조화입니다. 우리는 거창한 일을 못 할 작은 존재일지라도, 영혼은 작아서는 안 됩니다. 하늘과 땅, 꽃잎 한 장, 풀 한 포기까지 사랑하세요.</p>
+        <p>자녀 마음에 봉사와 헌신의 꿈을 기르세요—자신만을 위해 많은 돈을 버는 꿈만이 아니라. 봉사가 먼저, 보답은 뒤에 따릅니다. 길 쓸기, 공학, 서빙, 나라 이끌기—봉사의 마음이면 모두 고귀한 일입니다.</p>
+        <p class="label">실천</p>
+        <ul class="practice-list">
+          <li>벌고 싶은 마음보다 봉사하고 싶은 마음을 칭찬.</li>
+          <li>공기·물·음식에 대한 매일의 감사를 모든 생명에 대한 사랑으로.</li>
+          <li>봉사를 위해 하는 모든 정직한 일을 존중.</li>
+        </ul>
+        <blockquote><p>부모의 은혜가 깊으니—이 생에 넓게 봉사하고 싶다.</p></blockquote>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <p class="label">教诲</p>
+        <p>教孩子怀抱大志，对国家与世界负有重大责任。无人能孤立存在；不与周遭互动者必自毁。所吸的空气、所饮的水、所食的食物，皆是全宇宙奇妙的协调。我们或许渺小，做不了大事，但心灵切不可渺小——要爱天地，爱每一瓣花、每一根草。</p>
+        <p>在孩子心中培育奉献与贡献之梦，而非只为己身多赚钱。先奉献，回报随后。扫街、工程、侍应、治国——只要是奉仕之心，一切诚实的工作都尊贵。</p>
+        <p class="label">实践</p>
+        <ul class="practice-list">
+          <li>称赞愿奉献的心，胜过愿赚钱的心。</li>
+          <li>将每日对空气、水、食物的感恩，化为对一切生命的爱。</li>
+          <li>敬重一切为奉仕而做的诚实工作。</li>
+        </ul>
+        <blockquote>
+          <p>父母恩情何其深</p>
+          <p>只愿毕生广奉仕。</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <footer class="closing" id="closing">
+      <div class="en-only">
+        <h2>Closing Verse</h2>
+        <div class="closing-verse" aria-label="Closing verse">
+          <p>Walking upon lotus blossoms,<br>the Buddha has given the world a lamp of the spirit.</p>
+          <p>Far from clinging to ego and ignorance,<br>this planet is but a realm of peace.</p>
+          <p>We remember the Buddha’s grace across a thousand lifetimes;<br>we venerate the Buddha — a thousand words could never say enough.</p>
+        </div>
+        <p class="buddha-homage">Namo the Great Heroic, the Great Powerful, the Great Compassionate, the Great Merciful, Our Original Teacher Shakyamuni Buddha.</p>
+      </div>
+      <div class="vi-only" lang="vi">
+        <h2>Lời kết</h2>
+        <div class="closing-verse" aria-label="Bài thơ lời kết">
+          <p>Bước đi trên những đóa sen<br>Phật cho thế giới ngọn đèn tâm linh</p>
+          <p>Xa lìa chấp ngã vô minh<br>Tinh cầu là một cõi bình an thôi</p>
+          <p>Nhớ ơn Phật mãi nghìn đời<br>Kính yêu Phật nói nghìn lời không vơi.</p>
+        </div>
+        <p class="buddha-homage">Nam Mô Đại Hùng Đại Lực Đại Từ Đại Bi Bổn Sư Thích Ca Mâu Ni Phật.</p>
+      </div>
+      <!-- ANCHOR:closing -->
+<!-- INJECTED:closing -->
+<div class="ja-only" lang="ja">
+        <h2>結びの偈</h2>
+        <div class="closing-verse" aria-label="結びの偈">
+          <p>蓮の花の上を歩まれる<br>仏は世に心の灯をお与えになった</p>
+          <p>我執と無明を遠く離れ<br>この星球はただ一方の平安の境</p>
+          <p>仏の恩は千秋も忘れず<br>仏を敬愛する—千の言葉も尽くせない</p>
+        </div>
+        <p class="buddha-homage">南無大雄大力大慈大悲本師釈迦牟尼仏</p>
+      </div>
+      <div class="ko-only" lang="ko">
+        <h2>맺음말</h2>
+        <div class="closing-verse" aria-label="맺음 시">
+          <p>연꽃 위를 걸으시며<br>부처님은 세상에 마음의 등불을 주셨네</p>
+          <p>아집과 무명을 멀리 떠나<br>이 행성은 오직 한 평안의 세계</p>
+          <p>부처 은혜 천생도 잊지 않고<br>부처를 경애—천 마디로도 다하지 못하네</p>
+        </div>
+        <p class="buddha-homage">남무대웅대력대자대비본사석가모니불</p>
+      </div>
+      <div class="zh-only" lang="zh-Hans">
+        <h2>结语</h2>
+        <div class="closing-verse" aria-label="结语偈颂">
+          <p>步步踏于莲朵之上<br>佛为世间赐一心灯</p>
+          <p>远离我执与无明<br>星球不过是一方平安境界</p>
+          <p>佛恩千秋难忘<br>敬爱佛陀—千言万语说不尽</p>
+        </div>
+        <p class="buddha-homage">南无大雄大力大慈大悲本师释迦牟尼佛</p>
+      </div>
+    </footer>
+  </main>
+
+  <button type="button" class="back-top" id="back-top" aria-label="Lên đầu trang">↑</button>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = "handbook-lang";
+      var LANGS = ["vi", "en", "ja", "ko", "zh"];
+      var DEFAULT_LANG = "vi";
+      var body = document.body;
+      var buttons = document.querySelectorAll(".lang-switch button");
+
+      function htmlLang(code) {
+        if (code === "zh") return "zh-Hans";
+        return code;
+      }
+
+      function setLang(lang) {
+        if (LANGS.indexOf(lang) === -1) lang = DEFAULT_LANG;
+        LANGS.forEach(function (l) { body.classList.remove("lang-" + l); });
+        body.classList.add("lang-" + lang);
+        document.documentElement.lang = htmlLang(lang);
+        buttons.forEach(function (btn) {
+          btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
+        });
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+      if (saved && LANGS.indexOf(saved) !== -1) setLang(saved);
+      else setLang(DEFAULT_LANG);
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setLang(btn.getAttribute("data-lang"));
+        });
+      });
+
+      document.querySelectorAll("#intro, .toc, .closing").forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+      if ("IntersectionObserver" in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.06, rootMargin: "0px 0px -30px 0px" });
+        document.querySelectorAll("section[id^='p']").forEach(function (el) {
+          obs.observe(el);
+        });
+      } else {
+        document.querySelectorAll("section[id^='p']").forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+      }
+
+      var backTop = document.getElementById("back-top");
+      if (backTop) {
+        window.addEventListener("scroll", function () {
+          backTop.classList.toggle("visible", window.scrollY > 400);
+        }, { passive: true });
+        backTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

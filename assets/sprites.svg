@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a962"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+    <linearGradient id="gSoft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5efe3"/>
+      <stop offset="100%" stop-color="#e8dcc4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hero: lotus & family -->
+  <symbol id="hero-lotus" viewBox="0 0 200 160">
+    <ellipse cx="100" cy="145" rx="85" ry="12" fill="#e8dcc4" opacity=".6"/>
+    <path d="M100 95c-18 0-32 14-32 32 0 8 4 15 10 20-6 4-10 11-10 18h84c0-7-4-14-10-18 6-5 10-12 10-20 0-18-14-32-32-32z" fill="#f5efe3" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M72 55c8-20 28-32 28-32s20 12 28 32" fill="none" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+    <path d="M100 23c0 0-8 12-8 22s3.6 16 8 22c4.4-6 8-12 8-22s-8-22-8-22z" fill="url(#gGold)" opacity=".9"/>
+    <path d="M85 38c-6 8-6 18-2 26M115 38c6 8 6 18 2 26" fill="none" stroke="#c9a962" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="88" cy="78" r="3" fill="#6b4f18"/><circle cx="112" cy="78" r="3" fill="#6b4f18"/>
+    <path d="M94 88q6 6 12 0" fill="none" stroke="#6b4f18" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M55 100c-8-4-14 2-14 10M145 100c8-4 14 2 14 10" fill="none" stroke="#9a7224" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-teach" viewBox="0 0 48 48">
+    <rect x="8" y="6" width="32" height="36" rx="4" fill="url(#gSoft)" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M14 16h20M14 22h16M14 28h12" stroke="#9a7224" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="36" cy="12" r="6" fill="#c9a962"/>
+  </symbol>
+  <symbol id="icon-practice" viewBox="0 0 48 48">
+    <path d="M24 8v32M16 20l8-8 8 8M16 36l8-6 8 6" fill="none" stroke="#9a7224" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="24" cy="24" r="20" fill="none" stroke="#e8dcc4" stroke-width="2"/>
+  </symbol>
+  <symbol id="icon-say" viewBox="0 0 48 48">
+    <path d="M8 14c0-4 6-8 16-8s16 4 16 8v10c0 4-6 8-16 8-3 0-6-.5-8-1.5L10 38v-12c-2-2-2-6-2-12z" fill="url(#gSoft)" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M18 22h12M18 28h8" stroke="#9a7224" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="p1-respect" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M40 18v28M28 32l12-8 12 8" fill="none" stroke="#9a7224" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="40" cy="52" rx="14" ry="6" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+    <path d="M40 12c-6 10-6 18 0 6 6-8 6-16 0-6z" fill="url(#gGold)"/>
+  </symbol>
+  <symbol id="p2-compassion" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M40 52c-12-8-20-16-20-26a12 12 0 0124 0c0 10-8 18-20 26z" fill="#c9a962" opacity=".85"/>
+    <path d="M26 48c-6 4-10 2-10-4M54 48c6 4 10 2 10-4" fill="none" stroke="#9a7224" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p3-strive" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M16 58 L40 22 L64 58" fill="none" stroke="#e8dcc4" stroke-width="3"/>
+    <path d="M28 58 L40 32 L52 58" fill="none" stroke="#9a7224" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="40" cy="28" r="4" fill="#c9a962"/>
+  </symbol>
+  <symbol id="p4-humility" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M28 50c0-12 5-22 12-26 7 4 12 14 12 26" fill="#f5efe3" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M34 38h12" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 56h32" stroke="#9a7224" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+  </symbol>
+  <symbol id="p5-kindness" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M40 20v40M24 36h32" stroke="#e8dcc4" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="40" cy="40" r="18" fill="none" stroke="#9a7224" stroke-width="2"/>
+    <path d="M32 40c2 4 6 6 8 6s6-2 8-6" fill="none" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p6-friends" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <circle cx="30" cy="36" r="10" fill="#f5efe3" stroke="#9a7224" stroke-width="1.5"/>
+    <circle cx="50" cy="36" r="10" fill="#f5efe3" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M22 54c4-8 12-12 18-12s14 4 18 12" fill="none" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M52 28l6-6 6 6-6 6z" fill="#c9a962"/>
+  </symbol>
+  <symbol id="p7-honesty" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M24 44c0-10 7-18 16-18s16 8 16 18" fill="none" stroke="#9a7224" stroke-width="2"/>
+    <path d="M30 52h20M34 58h12" stroke="#c9a962" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40 26v8l4 4" fill="none" stroke="#9a7224" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p8-calm" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <path d="M12 48c12-6 24-6 36 0s24 6 36 0" fill="none" stroke="#c9a962" stroke-width="2"/>
+    <path d="M12 56c12-4 24-4 36 0s24 4 36 0" fill="none" stroke="#9a7224" stroke-width="1.5" opacity=".6"/>
+    <circle cx="40" cy="32" r="10" fill="url(#gGold)" opacity=".7"/>
+  </symbol>
+  <symbol id="p9-meditate" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <ellipse cx="40" cy="48" rx="16" ry="6" fill="#e8dcc4"/>
+    <circle cx="40" cy="30" r="8" fill="#f5efe3" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M28 48c4 6 8 8 12 8s8-2 12-8" fill="none" stroke="#9a7224" stroke-width="2"/>
+    <path d="M40 18c0 0-4 6-4 10s2 8 4 10 4-6 4-10-4-10-4-10z" fill="#c9a962" opacity=".5"/>
+  </symbol>
+  <symbol id="p10-service" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="36" fill="url(#gSoft)"/>
+    <circle cx="40" cy="38" r="18" fill="none" stroke="#9a7224" stroke-width="1.5"/>
+    <path d="M40 20v36M28 32h24M28 44h24" stroke="#c9a962" stroke-width="1.2" opacity=".7"/>
+    <path d="M32 54l8-6 8 6v6H32z" fill="url(#gGold)"/>
+  </symbol>
+
+  <symbol id="deco-lotus-sm" viewBox="0 0 24 24">
+    <path d="M12 4c0 0-4 6-4 10a4 4 0 008 0c0-4-4-10-4-10z" fill="#c9a962" opacity=".6"/>
+  </symbol>
+</svg>
