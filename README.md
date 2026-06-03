@@ -2,6 +2,20 @@
 
 Trang web đọc đa ngôn ngữ (Anh / Việt / 日本語 / 한국어 / 中文) từ hai bản PDF trong thư mục này.
 
+## Cấu trúc dự án
+
+| File | Vai trò |
+|------|---------|
+| `index.html` | Nội dung sách (đa ngôn ngữ), markup |
+| `assets/css/handbook.css` | Giao diện (theme sáng/tối, layout) |
+| `assets/js/i18n.js` | Chuỗi UI (tìm kiếm, tiếp tục đọc, toast, theme) |
+| `assets/js/handbook.js` | Hành vi: đổi ngôn ngữ, tìm, lưu vị trí đọc, icon |
+| `assets/sprites.svg` | Icon SVG dùng chung |
+| `scripts/inject_i18n.py` | Gắn khối JA/KO/ZH từ `scripts/cjk-blocks*.html` |
+| `Parenting_Handbook_*.pdf` | Bản gốc tham chiếu (không render trong trang web) |
+
+Theme khởi tạo sớm vẫn nằm inline trong `<head>` của `index.html` (tránh nháy sáng/tối).
+
 ## Đọc trên máy tính
 
 Mở file `index.html` bằng trình duyệt (kéo thả vào Chrome/Safari).
@@ -55,6 +69,12 @@ Repo GitHub có thể giữ **private** (Netlify/Cloudflare kết nối quyền 
 - Mặc định **Tiếng Việt**; nút **VI** / **EN** / **日本語** / **한국어** / **中文** ở đầu trang (ghi nhớ lựa chọn trên trình duyệt).
 - Mục lục 10 điều, nhảy tới từng phần.
 - Giao diện tối ưu điện thoại và in ấn.
+- Chế độ sáng/tối, tìm trong trang, tiếp tục đọc, sao chép nội dung từng điều.
+
+## Đa ngôn ngữ (EN / JA / KO / ZH)
+
+- **Tiếng Anh** (`en-only`) là bản gốc theo `Parenting_Handbook_English.pdf`.
+- **日本語 / 한국어 / 中文** dịch sát từ tiếng Anh (không rút gọn ý). Thuật ngữ thống nhất: xem `scripts/I18N_GLOSSARY.md`.
 
 ## File gốc
 

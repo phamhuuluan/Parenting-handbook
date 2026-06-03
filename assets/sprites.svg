@@ -40,4 +40,14 @@
   <symbol id="deco-lotus-sm" viewBox="0 0 24 24">
     <path d="M12 4c0 0-4 6-4 10a4 4 0 008 0c0-4-4-10-4-10z" fill="#c9a962" opacity=".6"/>
   </symbol>
+
+  <!-- Five-petal blossom (not lotus) for remember-notes -->
+  <symbol id="deco-blossom" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="2.8" fill="#8b6914"/>
+    <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65"/>
+    <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65" transform="rotate(72 12 12)"/>
+    <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65" transform="rotate(144 12 12)"/>
+    <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65" transform="rotate(216 12 12)"/>
+    <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65" transform="rotate(288 12 12)"/>
+  </symbol>
 </svg>
