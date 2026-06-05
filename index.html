@@ -20,7 +20,7 @@
   <meta name="description" content="Ten principles for nurturing good character — reader in Vietnamese, English, Japanese, Korean, and Chinese.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/handbook.css">
 </head>
 <body class="lang-vi">
@@ -33,14 +33,14 @@
       <span class="site-title zh-only">育儿手册</span>
     </div>
     <div class="header-tools">
-      <button type="button" class="header-icon-btn search-open-btn" id="search-open-btn" aria-label="Tìm trong trang" title="Tìm trong trang">
-        <span aria-hidden="true">⌕</span>
+      <button type="button" class="header-icon-btn bookmarks-open-btn" id="bookmarks-open-btn" aria-label="Đã lưu" title="Đã lưu"></button>
+      <button type="button" class="header-icon-btn search-open-btn" id="search-open-btn" aria-label="Tìm trong trang" title="Tìm trong trang"></button>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Bật giao diện tối" title="Giao diện tối"></button>
+      <button type="button" class="lang-menu-btn" id="lang-menu-btn" aria-haspopup="dialog" aria-controls="lang-dialog" aria-expanded="false">
+        <span class="lang-menu-current" id="lang-menu-current">VI</span>
+        <span class="lang-menu-chevron" aria-hidden="true">▾</span>
       </button>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Bật giao diện tối" title="Giao diện tối">
-        <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-      </button>
-      <div class="lang-switch" role="group" aria-label="Language">
+      <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language">
       <button type="button" data-lang="vi" aria-pressed="true">VI</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
       <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
@@ -50,7 +50,9 @@
     </div>
   </header>
 
-  <main>
+  <div class="page-shell">
+    <aside class="toc-sidebar" id="toc-sidebar" aria-hidden="true"></aside>
+    <main class="content-main">
     <!-- COVER -->
     <header class="cover">
       <div class="cover-block en-only">
@@ -179,7 +181,8 @@
     </section>
 
     <!-- TOC -->
-    <nav class="toc" aria-label="Table of contents">
+    <div class="toc-slot-mobile" id="toc-slot-mobile">
+    <nav class="toc" id="toc" aria-label="Table of contents">
       <div class="toc-head en-only">
         <h2>The Ten Principles</h2>
         <p class="toc-sub">Tap a principle to read</p>
@@ -263,6 +266,7 @@
         <li><a href="#p10"><span class="toc-label">培育大志与服务之心</span></a></li>
       </ol>
     </nav>
+    </div>
 
     <!-- PRINCIPLE 1 -->
     <section id="p1">
@@ -1388,6 +1392,7 @@
       </div>
     </footer>
   </main>
+  </div>
 
   <div class="read-resume" id="read-resume" hidden>
     <button type="button" class="read-resume-action" id="read-resume-action">
@@ -1396,6 +1401,33 @@
     <button type="button" class="read-resume-dismiss" id="read-resume-dismiss" aria-label="Đóng">×</button>
   </div>
   <button type="button" class="back-top" id="back-top" aria-label="Lên đầu trang">↑</button>
+
+  <dialog class="bookmarks-dialog" id="bookmarks-dialog" aria-labelledby="bookmarks-dialog-title">
+    <div class="bookmarks-dialog-inner">
+      <div class="bookmarks-dialog-head">
+        <h2 id="bookmarks-dialog-title">Đã lưu</h2>
+        <button type="button" class="bookmarks-close" id="bookmarks-close" aria-label="Đóng">×</button>
+      </div>
+      <p class="bookmarks-hint" id="bookmarks-hint"></p>
+      <ul class="bookmarks-list" id="bookmarks-list" role="list"></ul>
+    </div>
+  </dialog>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-dialog-title">
+    <div class="lang-dialog-inner">
+      <div class="lang-dialog-head">
+        <h2 id="lang-dialog-title">Ngôn ngữ</h2>
+        <button type="button" class="lang-close" id="lang-close" aria-label="Đóng">×</button>
+      </div>
+      <div class="lang-dialog-list" id="lang-dialog-list" role="group">
+        <button type="button" class="lang-dialog-option" data-lang="vi" aria-pressed="true"><span class="lang-dialog-name"></span><span class="lang-dialog-code"></span></button>
+        <button type="button" class="lang-dialog-option" data-lang="en" aria-pressed="false"><span class="lang-dialog-name"></span><span class="lang-dialog-code"></span></button>
+        <button type="button" class="lang-dialog-option" data-lang="ja" aria-pressed="false"><span class="lang-dialog-name"></span><span class="lang-dialog-code"></span></button>
+        <button type="button" class="lang-dialog-option" data-lang="ko" aria-pressed="false"><span class="lang-dialog-name"></span><span class="lang-dialog-code"></span></button>
+        <button type="button" class="lang-dialog-option" data-lang="zh" aria-pressed="false"><span class="lang-dialog-name"></span><span class="lang-dialog-code"></span></button>
+      </div>
+    </div>
+  </dialog>
 
   <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-dialog-title">
     <div class="search-dialog-inner">

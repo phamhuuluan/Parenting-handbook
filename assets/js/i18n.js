@@ -134,6 +134,73 @@
       ko: { light: "다크 모드로 전환", dark: "라이트 모드로 전환" },
       zh: { light: "切换到深色模式", dark: "切换到浅色模式" }
     },
-    THEME_COLORS: { light: "#f7f3eb", dark: "#1a1714" }
+    THEME_COLORS: { light: "#fafafa", dark: "#111111" },
+    LANG_MENU_UI: {
+      vi: { title: "Ngôn ngữ", open: "Chọn ngôn ngữ" },
+      en: { title: "Language", open: "Choose language" },
+      ja: { title: "言語", open: "言語を選択" },
+      ko: { title: "언어", open: "언어 선택" },
+      zh: { title: "语言", open: "选择语言" }
+    },
+    LANG_SHORT: { vi: "VI", en: "EN", ja: "日本語", ko: "한국어", zh: "中文" },
+    LANG_NAMES: {
+      vi: "Tiếng Việt",
+      en: "English",
+      ja: "日本語",
+      ko: "한국어",
+      zh: "中文"
+    },
+    BOOKMARK_UI: {
+      vi: {
+        open: "Đã lưu",
+        title: "Điều đã lưu",
+        hint: "Các điều bạn đánh dấu — lưu trên thiết bị này.",
+        empty: "Chưa có điều nào được lưu. Nhấn biểu tượng lưu ở từng điều để đánh dấu.",
+        add: "Lưu điều {n}",
+        remove: "Bỏ lưu điều {n}",
+        article: "Điều {n}",
+        goto: "Đọc điều {n}"
+      },
+      en: {
+        open: "Saved",
+        title: "Saved principles",
+        hint: "Principles you bookmarked — stored on this device only.",
+        empty: "No saved principles yet. Tap the bookmark icon on any principle to save it.",
+        add: "Save principle {n}",
+        remove: "Remove principle {n}",
+        article: "Principle {n}",
+        goto: "Read principle {n}"
+      },
+      ja: {
+        open: "保存済み",
+        title: "保存した原則",
+        hint: "ブックマークした項目 — この端末にのみ保存されます。",
+        empty: "まだ保存がありません。各原則のブックマークをタップして保存してください。",
+        add: "第{n}条を保存",
+        remove: "第{n}条の保存を解除",
+        article: "第{n}条",
+        goto: "第{n}条を読む"
+      },
+      ko: {
+        open: "저장됨",
+        title: "저장한 원칙",
+        hint: "북마크한 항목 — 이 기기에만 저장됩니다.",
+        empty: "저장된 원칙이 없습니다. 각 원칙의 북마크를 눌러 저장하세요.",
+        add: "제{n}항 저장",
+        remove: "제{n}항 저장 해제",
+        article: "제{n}항",
+        goto: "제{n}항 읽기"
+      },
+      zh: {
+        open: "已收藏",
+        title: "收藏的要义",
+        hint: "您标记的条目 — 仅保存在本设备。",
+        empty: "尚无收藏。点按各条目的收藏图标即可收藏。",
+        add: "收藏第{n}条",
+        remove: "取消收藏第{n}条",
+        article: "第{n}条",
+        goto: "阅读第{n}条"
+      }
+    }
   };
 })();

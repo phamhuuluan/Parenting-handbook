@@ -41,7 +41,52 @@
     <path d="M12 4c0 0-4 6-4 10a4 4 0 008 0c0-4-4-10-4-10z" fill="#c9a962" opacity=".6"/>
   </symbol>
 
+  <symbol id="icon-lotus-lg" viewBox="0 0 64 72">
+    <ellipse cx="32" cy="52" rx="22" ry="5" fill="#e8dcc4" opacity=".55"/>
+    <path d="M32 58v6" stroke="#9a7224" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M24 64c4-2 8-2 16 0" stroke="#9a7224" stroke-width="1.25" stroke-linecap="round" fill="none"/>
+    <circle cx="32" cy="38" r="5" fill="#8b6914"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(45 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(90 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(135 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(180 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(225 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(270 32 38)"/>
+    <ellipse cx="32" cy="28" rx="9" ry="16" fill="url(#gGold)" stroke="#9a7224" stroke-width="1.1" transform="rotate(315 32 38)"/>
+  </symbol>
+
   <!-- Five-petal blossom (not lotus) for remember-notes -->
+  <symbol id="icon-search" viewBox="0 0 24 24">
+    <circle cx="10.25" cy="10.25" r="6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M15.5 15.5L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-moon" viewBox="0 0 24 24">
+    <path d="M20 15.2A7.8 7.8 0 019.8 4.2 7.8 7.8 0 1012 20.5a7.5 7.5 0 008-5.3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-sun" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.9"/>
+    <path d="M12 2.75v2.5M12 18.75v2.5M2.75 12h2.5M18.75 12h2.5M5.1 5.1l1.75 1.75M17.15 17.15l1.75 1.75M5.1 18.9l1.75-1.75M17.15 6.85l1.75-1.75" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-copy" viewBox="0 0 24 24">
+    <rect x="8.75" y="8.75" width="10.5" height="12.5" rx="1.75" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linejoin="round"/>
+    <path d="M6.5 15.25H5.9A2.15 2.15 0 013.75 13.1V5.9A2.15 2.15 0 015.9 3.75H13.1A2.15 2.15 0 0115.25 5.9V6.5" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-bookmark" viewBox="0 0 24 24">
+    <path d="M6 4.5A2.5 2.5 0 018.5 2h7A2.5 2.5 0 0118 4.5V20l-6-3.5L6 20V4.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-bookmark-filled" viewBox="0 0 24 24">
+    <path d="M6 4.5A2.5 2.5 0 018.5 2h7A2.5 2.5 0 0118 4.5V20l-6-3.5L6 20V4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-note" viewBox="0 0 24 24">
+    <path d="M5 4.5h11l3 3V19.5A1.5 1.5 0 0117.5 21h-12A1.5 1.5 0 014 19.5v-14A1.5 1.5 0 015.5 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M16 4.5V8h3M8 12h8M8 15.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+
   <symbol id="deco-blossom" viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="2.8" fill="#8b6914"/>
     <ellipse cx="12" cy="7" rx="3.4" ry="5" fill="#e8a87c" stroke="#9a7224" stroke-width=".65"/>
