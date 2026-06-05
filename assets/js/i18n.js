@@ -134,7 +134,7 @@
       ko: { light: "다크 모드로 전환", dark: "라이트 모드로 전환" },
       zh: { light: "切换到深色模式", dark: "切换到浅色模式" }
     },
-    THEME_COLORS: { light: "#fafafa", dark: "#111111" },
+    THEME_COLORS: { light: "#fafaf9", dark: "#111110" },
     LANG_MENU_UI: {
       vi: { title: "Ngôn ngữ", open: "Chọn ngôn ngữ" },
       en: { title: "Language", open: "Choose language" },

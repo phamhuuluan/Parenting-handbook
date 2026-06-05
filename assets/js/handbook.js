@@ -14,7 +14,7 @@
   var LANG_SHORT = I18N.LANG_SHORT || {};
   var LANG_NAMES = I18N.LANG_NAMES || {};
   var THEME_LABELS = I18N.THEME_LABELS || {};
-  var THEME_COLORS = I18N.THEME_COLORS || { light: "#fafafa", dark: "#111111" };
+  var THEME_COLORS = I18N.THEME_COLORS || { light: "#fafaf9", dark: "#111110" };
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -752,6 +752,10 @@ function wrapContentModulesInBlock(block) {
   while (i < nodes.length) {
     var node = nodes[i];
     if (node.matches(stops)) {
+      if (node.classList.contains("principle-note")) {
+        i++;
+        continue;
+      }
       var module = document.createElement("div");
       module.className = "content-module";
       block.insertBefore(module, node);
